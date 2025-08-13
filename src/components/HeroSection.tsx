@@ -82,11 +82,11 @@ const HeroSection: React.FC = () => {
       
       {/* Content */}
       <div className="relative z-10 h-full text-white px-6">
-        <div className="absolute bottom-8 left-6 max-w-2xl animate-fade-in">
-          <h1 className="heading-large mb-6 animate-slide-up">
+        <div className="absolute bottom-8 left-6 max-w-4xl animate-fade-in">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 animate-slide-up">
             {heroContent[currentSlide].title}
           </h1>
-          <p className="body-large mb-8 text-white/90 animate-slide-up">
+          <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-white/90 animate-slide-up leading-relaxed">
             {heroContent[currentSlide].subtitle}
           </p>
         </div>

@@ -32,7 +32,7 @@ const About: React.FC = () => {
       <HamburgerMenu />
       
       {/* About Section */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm uppercase tracking-wider text-corporate-medium mb-8">ABOUT</p>
           <h1 className="text-4xl md:text-6xl font-bold text-corporate-dark mb-8 max-w-5xl mx-auto leading-tight">
@@ -49,7 +49,7 @@ const About: React.FC = () => {
       </section>
 
       {/* First Carousel Section */}
-      <section className="py-32 bg-white overflow-hidden">
+      <section className="py-16 bg-white overflow-hidden">
         <ScrollCarousel 
           images={carouselImages1} 
           direction="right"
@@ -58,7 +58,7 @@ const About: React.FC = () => {
       </section>
 
       {/* What We Look For Section */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-corporate-dark mb-8">What we look for</h2>
           <p className="text-lg text-corporate-medium max-w-4xl mx-auto mb-16 leading-relaxed">
@@ -101,7 +101,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Second Carousel Section */}
-      <section className="py-32 bg-white overflow-hidden">
+      <section className="py-16 bg-white overflow-hidden">
         <ScrollCarousel 
           images={carouselImages2} 
           direction="left"
@@ -110,7 +110,7 @@ const About: React.FC = () => {
       </section>
 
       {/* What We Offer Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-corporate-dark mb-6">What we offer</h2>
@@ -176,7 +176,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Team and Portfolio Section */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Us Card */}
