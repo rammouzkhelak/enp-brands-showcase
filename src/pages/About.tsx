@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import HamburgerMenu from "../components/HamburgerMenu";
 import CircularButton from "../components/CircularButton";
+import ScrollCarousel from "../components/ScrollCarousel";
+import Footer from "../components/Footer";
 
 const About: React.FC = () => {
   const navigate = useNavigate();
@@ -9,6 +11,21 @@ const About: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // Sample images for carousels - you can replace with actual brand images
+  const carouselImages1 = [
+    "/lovable-uploads/809c785e-28aa-455f-a593-c2397c23f4a3.png",
+    "/lovable-uploads/298b60f0-ce09-4bd0-9014-48cc5ce67550.png",
+    "/lovable-uploads/809c785e-28aa-455f-a593-c2397c23f4a3.png",
+    "/lovable-uploads/298b60f0-ce09-4bd0-9014-48cc5ce67550.png"
+  ];
+
+  const carouselImages2 = [
+    "/lovable-uploads/298b60f0-ce09-4bd0-9014-48cc5ce67550.png",
+    "/lovable-uploads/809c785e-28aa-455f-a593-c2397c23f4a3.png",
+    "/lovable-uploads/298b60f0-ce09-4bd0-9014-48cc5ce67550.png",
+    "/lovable-uploads/809c785e-28aa-455f-a593-c2397c23f4a3.png"
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -29,6 +46,24 @@ const About: React.FC = () => {
             factory to end-user.
           </p>
         </div>
+      </section>
+
+      {/* First Carousel Section */}
+      <section className="py-20 bg-white overflow-hidden">
+        <ScrollCarousel 
+          images={carouselImages1} 
+          direction="right"
+          className="py-8"
+        />
+      </section>
+
+      {/* Second Carousel Section */}
+      <section className="py-20 bg-background overflow-hidden">
+        <ScrollCarousel 
+          images={carouselImages2} 
+          direction="left"
+          className="py-8"
+        />
       </section>
 
       {/* What We Offer Section */}
@@ -75,7 +110,7 @@ const About: React.FC = () => {
             </div>
 
             {/* Item 4 */}
-            <div className="text-center md:col-start-2 md:col-end-3">
+            <div className="text-center md:col-start-1 md:col-end-2 md:row-start-2">
               <div className="w-20 h-20 bg-corporate-dark rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
                 4
               </div>
@@ -85,7 +120,7 @@ const About: React.FC = () => {
             </div>
 
             {/* Item 5 */}
-            <div className="text-center md:col-start-2 md:col-end-3 md:row-start-3">
+            <div className="text-center md:col-start-2 md:col-end-3 md:row-start-2">
               <div className="w-20 h-20 bg-corporate-dark rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
                 5
               </div>
@@ -133,6 +168,8 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

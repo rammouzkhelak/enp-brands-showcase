@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import HamburgerMenu from "../components/HamburgerMenu";
+import Footer from "../components/Footer";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -114,6 +115,8 @@ const Portfolio: React.FC = () => {
           </section>
         </div>
       </main>
+      
+      <Footer />
     </div>
   );
 };

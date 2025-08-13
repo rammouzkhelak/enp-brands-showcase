@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import HamburgerMenu from "../components/HamburgerMenu";
+import Footer from "../components/Footer";
 import { ArrowLeft, Mail, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -146,6 +147,8 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </main>
+      
+      <Footer />
     </div>
   );
 };
