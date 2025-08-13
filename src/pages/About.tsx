@@ -49,20 +49,63 @@ const About: React.FC = () => {
       </section>
 
       {/* First Carousel Section */}
-      <section className="py-20 bg-white overflow-hidden">
+      <section className="py-32 bg-white overflow-hidden">
         <ScrollCarousel 
           images={carouselImages1} 
           direction="right"
-          className="py-8"
+          className="py-12"
         />
       </section>
 
+      {/* What We Look For Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-corporate-dark mb-8">What we look for</h2>
+          <p className="text-lg text-corporate-medium max-w-4xl mx-auto mb-16 leading-relaxed">
+            We are seeking to back the brands of tomorrow and the technologies that enable them to succeed in 
+            large markets.
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Beauty & Wellness Brands */}
+            <div className="bg-white p-8 border-4 border-corporate-dark">
+              <h3 className="text-xl font-bold text-corporate-dark mb-4">
+                Beauty & Wellness Brands
+              </h3>
+              <p className="text-corporate-medium leading-relaxed">
+                Relatable and authentic emerging brands operating across the digital and physical worlds
+              </p>
+            </div>
+
+            {/* Commerce & Enabling Technologies */}
+            <div className="bg-white p-8 border-4 border-corporate-dark">
+              <h3 className="text-xl font-bold text-corporate-dark mb-4">
+                Commerce & Enabling Technologies
+              </h3>
+              <p className="text-corporate-medium leading-relaxed">
+                Services and technologies that enhance the consumer experience and transform commerce
+              </p>
+            </div>
+
+            {/* B2B/Enterprise Technologies */}
+            <div className="bg-white p-8 border-4 border-corporate-dark">
+              <h3 className="text-xl font-bold text-corporate-dark mb-4">
+                B2B/Enterprise Technologies
+              </h3>
+              <p className="text-corporate-medium leading-relaxed">
+                Advanced Enterprise Technologies that allow higher reach, streamline processes or boost efficiencies
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Second Carousel Section */}
-      <section className="py-20 bg-background overflow-hidden">
+      <section className="py-32 bg-white overflow-hidden">
         <ScrollCarousel 
           images={carouselImages2} 
           direction="left"
-          className="py-8"
+          className="py-12"
         />
       </section>
 

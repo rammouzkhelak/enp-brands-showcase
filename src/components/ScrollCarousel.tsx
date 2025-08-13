@@ -39,7 +39,7 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
         {images.map((image, index) => (
           <div 
             key={index}
-            className="flex-shrink-0 w-80 h-60 rounded-lg overflow-hidden shadow-lg"
+            className="flex-shrink-0 w-96 h-80 rounded-lg overflow-hidden shadow-lg"
           >
             <img 
               src={image} 
@@ -52,7 +52,7 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
         {images.map((image, index) => (
           <div 
             key={`duplicate-${index}`}
-            className="flex-shrink-0 w-80 h-60 rounded-lg overflow-hidden shadow-lg"
+            className="flex-shrink-0 w-96 h-80 rounded-lg overflow-hidden shadow-lg"
           >
             <img 
               src={image} 
