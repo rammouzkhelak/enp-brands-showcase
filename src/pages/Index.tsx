@@ -23,7 +23,7 @@ const Index: React.FC = () => {
       {/* About Section */}
       <section id="about-section" className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl animate-fade-in">
+          <div className="max-w-4xl ml-16 animate-fade-in">
             <h2 className="heading-medium text-corporate-dark mb-8">
               We are the venture and growth capital arm of ENP Brands.
             </h2>
@@ -44,16 +44,27 @@ const Index: React.FC = () => {
       {/* Portfolio Section */}
       <section id="portfolio-section" className="py-24 bg-corporate-light">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl animate-fade-in">
-            <h2 className="heading-medium text-corporate-dark mb-8">
-              We work with some of your favourite brands.
-            </h2>
-            <p className="body-large text-corporate-medium mb-16 max-w-3xl">
-              We invest in beauty & wellness brands, commerce and technology that serve the modern consumer.
-            </p>
+          <div className="max-w-4xl ml-16 animate-fade-in">
+            <div className="flex items-start justify-between mb-16">
+              <div className="flex-1">
+                <h2 className="heading-medium text-corporate-dark mb-8">
+                  We work with some of your favourite brands.
+                </h2>
+                <p className="body-large text-corporate-medium max-w-3xl">
+                  We invest in beauty & wellness brands, commerce and technology that serve the modern consumer.
+                </p>
+              </div>
+              <div className="ml-8">
+                <Link to="/portfolio">
+                  <CircularButton
+                    text="VIEW OUR PORTFOLIO • VIEW OUR PORTFOLIO • "
+                  />
+                </Link>
+              </div>
+            </div>
             
             {/* Brand Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
               {["Infantino", "Vitalbaby", "Headu", "Huffy", "Multiprint"].map((brand, index) => (
                 <div 
                   key={brand} 
@@ -66,12 +77,6 @@ const Index: React.FC = () => {
                 </div>
               ))}
             </div>
-            
-            <Link to="/portfolio">
-              <CircularButton
-                text="VIEW OUR PORTFOLIO • VIEW OUR PORTFOLIO • "
-              />
-            </Link>
           </div>
         </div>
       </section>
@@ -79,7 +84,7 @@ const Index: React.FC = () => {
       {/* Contact CTA Section */}
       <section id="contact-section" className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl animate-fade-in">
+          <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h2 className="heading-medium text-corporate-dark mb-8">
               Got tomorrow's big idea?
             </h2>

@@ -87,12 +87,13 @@ const HeroSection: React.FC = () => {
           <CircularButton
             text="SCROLL DOWN • SCROLL DOWN • SCROLL DOWN • "
             onClick={scrollToNext}
+            arrowDirection="down"
           />
         </div>
       </div>
 
-      {/* Pagination Dots - positioned under hamburger menu */}
-      <div className="fixed top-28 right-6 z-30 flex flex-col space-y-3">
+      {/* Pagination Dots - positioned under hamburger menu, only visible on hero */}
+      <div className="absolute top-28 right-6 z-30 flex flex-col space-y-3">
         {heroImages.map((_, index) => (
           <button
             key={index}
