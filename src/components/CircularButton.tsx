@@ -9,9 +9,14 @@ interface CircularButtonProps {
 }
 
 const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, className = "", arrowDirection = 'right' }) => {
-  const radius = 60;
+  const radius = 70;
   const circumference = 2 * Math.PI * radius;
   const pathId = useId();
+  
+  // Calculate how many times to repeat the text to fill the circle
+  const estimatedTextLength = text.length * 6; // Approximate character width
+  const repetitions = Math.ceil(circumference / estimatedTextLength) + 1; // Add one extra for seamless loop
+  const repeatedText = text.repeat(repetitions);
   
   const handleClick = () => {
     if (onClick) {
@@ -29,9 +34,9 @@ const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, classNam
               d="M 80,80 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"
             />
           </defs>
-          <text className="text-[10px] font-bold fill-current uppercase tracking-wider" style={{ letterSpacing: '0.15em' }}>
+          <text className="text-[9px] font-bold fill-current uppercase tracking-wide" style={{ letterSpacing: '0.12em' }}>
             <textPath href={`#${pathId}`} startOffset="0%">
-              {text}
+              {repeatedText}
             </textPath>
           </text>
         </svg>
