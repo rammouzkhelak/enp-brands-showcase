@@ -26,14 +26,14 @@ const HamburgerMenu: React.FC = () => {
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className="fixed top-10 right-6 z-50 w-16 h-16 flex flex-col items-center justify-center space-y-1.5 bg-transparent hover:bg-black/5 transition-colors duration-300 rounded-lg"
+        className={`fixed top-10 right-6 z-50 w-16 h-16 flex flex-col items-center justify-center space-y-1.5 bg-transparent hover:bg-white/10 transition-colors duration-300 rounded-lg`}
         aria-label="Toggle menu"
       >
         {!isOpen ? (
           <>
-            <span className="w-8 h-0.5 bg-black block transition-all duration-300"></span>
-            <span className="w-8 h-0.5 bg-black block transition-all duration-300"></span>
-            <span className="w-8 h-0.5 bg-black block transition-all duration-300"></span>
+            <span className={`w-8 h-0.5 block transition-all duration-300 ${location.pathname === '/contact' ? 'bg-white' : 'bg-black'}`}></span>
+            <span className={`w-8 h-0.5 block transition-all duration-300 ${location.pathname === '/contact' ? 'bg-white' : 'bg-black'}`}></span>
+            <span className={`w-8 h-0.5 block transition-all duration-300 ${location.pathname === '/contact' ? 'bg-white' : 'bg-black'}`}></span>
           </>
         ) : (
           <X className="w-8 h-8 text-white" />
@@ -70,8 +70,8 @@ const HamburgerMenu: React.FC = () => {
 
       {/* Logo - visible on all pages except home where it only shows on hero section */}
       {location.pathname !== '/' && (
-        <div className={`fixed top-10 left-6 z-50 transition-opacity duration-300`}>
-          <Link to="/" className="text-2xl md:text-3xl font-bold text-black hover:opacity-80 transition-opacity">
+        <div className="fixed top-10 left-6 z-50 transition-opacity duration-300">
+          <Link to="/" className={`text-2xl md:text-3xl font-bold hover:opacity-80 transition-opacity ${location.pathname === '/contact' ? 'text-white' : 'text-black'}`}>
             ENP Brands
           </Link>
         </div>

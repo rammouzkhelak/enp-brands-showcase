@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import HamburgerMenu from "../components/HamburgerMenu";
 import Footer from "../components/Footer";
+import CircularButton from "../components/CircularButton";
 import { ArrowLeft, Mail, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -9,144 +10,134 @@ const Contact: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const scrollToLocations = () => {
+    const locationsSection = document.getElementById('locations-section');
+    if (locationsSection) {
+      locationsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-black text-white">
       <HamburgerMenu />
       
-      {/* Header */}
-      <header className="relative py-20 bg-corporate-light">
-        <div className="container mx-auto px-6">
-          <h1 className="heading-large text-corporate-dark">Get In Touch</h1>
-          <p className="body-large text-corporate-medium mt-6 max-w-3xl">
-            Got tomorrow's big idea? We would love to hear from you.
-          </p>
-        </div>
-      </header>
-
-      {/* Contact Content */}
-      <main className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16">
-            {/* Contact Information */}
-            <div className="animate-fade-in">
-              <h2 className="heading-medium text-corporate-dark mb-8">
-                Let's Build Something Great Together
-              </h2>
-              <p className="body-medium text-corporate-medium mb-8">
-                Whether you're an entrepreneur with a groundbreaking idea or an established brand looking to scale, 
-                we're here to help you succeed. Our team brings decades of experience in consumer brands, 
-                venture capital, and global market expansion.
-              </p>
-              
-              {/* Contact Details */}
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <MapPin className="w-6 h-6 text-corporate-accent mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-corporate-dark mb-1">Locations</h3>
-                    <p className="text-corporate-medium">London & New York</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <Mail className="w-6 h-6 text-corporate-accent mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-corporate-dark mb-1">Email</h3>
-                    <p className="text-corporate-medium">hello@enpbrands.com</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Social Links */}
-              <div className="mt-12">
-                <h3 className="font-semibold text-corporate-dark mb-4">Follow Us</h3>
-                <div className="flex space-x-4">
-                  <a href="#" className="w-10 h-10 bg-corporate-light rounded-full flex items-center justify-center hover:bg-corporate-accent hover:text-white transition-all duration-300">
-                    <Linkedin className="w-5 h-5" />
-                  </a>
-                  <a href="#" className="w-10 h-10 bg-corporate-light rounded-full flex items-center justify-center hover:bg-corporate-accent hover:text-white transition-all duration-300">
-                    <Twitter className="w-5 h-5" />
-                  </a>
-                  <a href="#" className="w-10 h-10 bg-corporate-light rounded-full flex items-center justify-center hover:bg-corporate-accent hover:text-white transition-all duration-300">
-                    <Instagram className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
+      {/* First Section: Hero with Email and Scroll Button */}
+      <section className="min-h-screen flex flex-col items-center justify-center px-6 relative">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+            We are ready when you are
+          </h1>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mt-16">
+            <div className="text-left">
+              <p className="text-lg md:text-xl text-gray-300 mb-2">Email us at</p>
+              <a href="mailto:hello@enpbrands.com" className="text-2xl md:text-3xl font-semibold hover:text-gray-300 transition-colors">
+                hello@enpbrands.com
+              </a>
             </div>
+            <CircularButton 
+              text="OUR LOCATIONS • OUR LOCATIONS • " 
+              arrowDirection="down"
+              onClick={scrollToLocations}
+              className="text-white"
+            />
+          </div>
+        </div>
+      </section>
 
-            {/* Contact Form */}
-            <div className="animate-slide-up">
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="heading-small text-corporate-dark mb-6">Send us a message</h3>
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-corporate-dark mb-2">
-                        First Name
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-3 border border-corporate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-corporate-accent"
-                        placeholder="John"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-corporate-dark mb-2">
-                        Last Name
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-3 border border-corporate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-corporate-accent"
-                        placeholder="Smith"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-corporate-dark mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-3 border border-corporate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-corporate-accent"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-corporate-dark mb-2">
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 border border-corporate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-corporate-accent"
-                      placeholder="Your Company"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-corporate-dark mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      rows={6}
-                      className="w-full px-4 py-3 border border-corporate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-corporate-accent resize-none"
-                      placeholder="Tell us about your project or idea..."
-                    ></textarea>
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    className="w-full bg-corporate-dark text-white py-3 px-6 rounded-lg hover:bg-corporate-medium transition-colors duration-300 font-semibold"
-                  >
-                    Send Message
-                  </button>
-                </form>
+      {/* Second Section: Our Locations */}
+      <section id="locations-section" className="py-20 px-6">
+        <div className="container mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Our locations</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* London */}
+            <div className="bg-gray-800 p-8 rounded-lg">
+              <h3 className="text-3xl font-bold mb-6">London</h3>
+              <div className="space-y-2 text-gray-300">
+                <p className="font-semibold text-white">ENP Brands</p>
+                <p>52 Conduit Street</p>
+                <p>London</p>
+                <p>W1S 2YX</p>
+                <p>UK</p>
+              </div>
+              <button className="mt-6 text-sm font-semibold text-white border-b border-white/30 hover:border-white transition-colors">
+                GOOGLE MAPS
+              </button>
+            </div>
+            
+            {/* New York */}
+            <div className="bg-gray-800 p-8 rounded-lg">
+              <h3 className="text-3xl font-bold mb-6">New York</h3>
+              <div className="space-y-2 text-gray-300">
+                <p className="font-semibold text-white">ENP Brands America</p>
+                <p>Private Ltd</p>
+                <p>ENP House</p>
+                <p>BD Sawant Marg</p>
+                <p>Chakala, Andheri East</p>
+                <p>New York 10001</p>
+                <p>USA</p>
+              </div>
+              <button className="mt-6 text-sm font-semibold text-white border-b border-white/30 hover:border-white transition-colors">
+                GOOGLE MAPS
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Third Section: Find Us Online */}
+      <section className="py-20 px-6 border-t border-gray-800">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12">Find us online</h2>
+          
+          {/* Social Media Icons */}
+          <div className="flex justify-center space-x-8 mb-16">
+            <a href="#" className="w-12 h-12 flex items-center justify-center border border-gray-600 rounded-full hover:bg-white hover:text-black transition-all duration-300">
+              <Instagram className="w-6 h-6" />
+            </a>
+            <a href="#" className="w-12 h-12 flex items-center justify-center border border-gray-600 rounded-full hover:bg-white hover:text-black transition-all duration-300">
+              <Linkedin className="w-6 h-6" />
+            </a>
+            <a href="#" className="w-12 h-12 flex items-center justify-center border border-gray-600 rounded-full hover:bg-white hover:text-black transition-all duration-300">
+              <Twitter className="w-6 h-6" />
+            </a>
+          </div>
+
+          {/* Company Logo */}
+          <div className="mb-16">
+            <h1 className="text-3xl font-bold mb-2">ENP Brands</h1>
+            <div className="w-16 h-px bg-white mx-auto"></div>
+            <p className="text-sm text-gray-400 mt-2">VENTURES</p>
+          </div>
+
+          {/* Footer Info */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto pt-8 border-t border-gray-800">
+            <div>
+              <h4 className="text-sm font-semibold text-gray-400 mb-3 tracking-wider">LOCATIONS</h4>
+              <p className="text-lg font-semibold">London & New York</p>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-gray-400 mb-3 tracking-wider">EMAIL</h4>
+              <a href="mailto:hello@enpbrands.com" className="text-lg font-semibold hover:text-gray-300 transition-colors">
+                hello@enpbrands.com
+              </a>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-gray-400 mb-3 tracking-wider">SOCIAL</h4>
+              <div className="flex justify-center space-x-4">
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  <Twitter className="w-5 h-5" />
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </main>
+      </section>
       
       <Footer />
     </div>
