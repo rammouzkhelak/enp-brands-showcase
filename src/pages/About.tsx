@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import HamburgerMenu from "../components/HamburgerMenu";
+import CircularButton from "../components/CircularButton";
 
 const About: React.FC = () => {
+  const navigate = useNavigate();
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -71,7 +75,7 @@ const About: React.FC = () => {
             </div>
 
             {/* Item 4 */}
-            <div className="text-center md:col-start-1 md:col-end-2">
+            <div className="text-center md:col-start-2 md:col-end-3">
               <div className="w-20 h-20 bg-corporate-dark rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
                 4
               </div>
@@ -81,13 +85,50 @@ const About: React.FC = () => {
             </div>
 
             {/* Item 5 */}
-            <div className="text-center md:col-start-3 md:col-end-4">
+            <div className="text-center md:col-start-2 md:col-end-3 md:row-start-3">
               <div className="w-20 h-20 bg-corporate-dark rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
                 5
               </div>
               <h3 className="text-xl font-bold text-corporate-dark mb-4">
                 We offer flexible capital, investing from $500,000 to $15 million
               </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team and Portfolio Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Contact Us Card */}
+            <div className="bg-white p-12 border-4 border-corporate-dark">
+              <h2 className="text-3xl md:text-4xl font-bold text-corporate-dark mb-6">Contact Us</h2>
+              <p className="text-lg text-corporate-medium mb-8 leading-relaxed">
+                Got tomorrow's big idea? We want to hear from you. Let's build something extraordinary together.
+              </p>
+              <div className="flex justify-end">
+                <CircularButton 
+                  text="GET IN TOUCH • GET IN TOUCH • " 
+                  onClick={() => navigate('/contact')}
+                  className="text-corporate-dark"
+                />
+              </div>
+            </div>
+
+            {/* Portfolio Card */}
+            <div className="bg-white p-12 border-4 border-corporate-dark">
+              <h2 className="text-3xl md:text-4xl font-bold text-corporate-dark mb-6">Our Portfolio</h2>
+              <p className="text-lg text-corporate-medium mb-8 leading-relaxed">
+                Discover our brand crafters, change leaders and commerce trail blazers.
+              </p>
+              <div className="flex justify-end">
+                <CircularButton 
+                  text="VIEW OUR PORTFOLIO • VIEW OUR PORTFOLIO • " 
+                  onClick={() => navigate('/portfolio')}
+                  className="text-corporate-dark"
+                />
+              </div>
             </div>
           </div>
         </div>
