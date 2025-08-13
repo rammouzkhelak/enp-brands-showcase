@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
       <HamburgerMenu />
       
       {/* First Section: Hero with Email and Scroll Button */}
-      <section className="py-20 flex flex-col items-center justify-center px-6 relative">
+      <section className="min-h-screen flex flex-col items-center justify-center px-6 relative">
         <div className="max-w-6xl mx-auto w-full">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
             {/* Left side: Heading and Email */}
@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Second Section: Our Locations */}
-      <section id="locations-section" className="py-10 px-6">
+      <section id="locations-section" className="py-20 px-6">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Our locations</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
