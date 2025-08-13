@@ -26,7 +26,7 @@ const HamburgerMenu: React.FC = () => {
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className={`fixed top-10 right-6 z-50 w-16 h-16 flex flex-col items-center justify-center space-y-1.5 bg-transparent hover:bg-white/10 transition-colors duration-300 rounded-lg`}
+        className={`absolute top-10 right-6 z-50 w-16 h-16 flex flex-col items-center justify-center space-y-1.5 bg-transparent hover:bg-white/10 transition-colors duration-300 rounded-lg`}
         aria-label="Toggle menu"
       >
         {!isOpen ? (

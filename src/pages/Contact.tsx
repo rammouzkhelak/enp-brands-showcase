@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
             {/* Left side: Heading and Email */}
             <div className="text-left flex-1">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
                 We are ready when you are
               </h1>
               <div className="mt-8">
