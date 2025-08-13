@@ -43,9 +43,9 @@ const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, classNam
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
         {arrowDirection === 'down' ? (
-          <ArrowDown className="w-8 h-8 text-current transition-all duration-300 group-hover:scale-110 group-hover:translate-y-2" />
+          <ArrowDown className="w-9 h-9 text-current transition-all duration-300 group-hover:scale-110 group-hover:translate-y-2" />
         ) : (
-          <ArrowRight className="w-8 h-8 text-current transition-transform group-hover:scale-110" />
+          <ArrowRight className="w-9 h-9 text-current transition-transform group-hover:scale-110" />
         )}
       </div>
     </div>
