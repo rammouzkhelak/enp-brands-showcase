@@ -74,24 +74,25 @@ const HeroSection: React.FC = () => {
       ))}
       
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
-        <div className="max-w-4xl animate-fade-in">
+      <div className="relative z-10 h-full text-white px-6">
+        <div className="absolute bottom-8 left-6 max-w-2xl animate-fade-in">
           <h1 className="heading-large mb-6 animate-slide-up">
             {heroContent[currentSlide].title}
           </h1>
-          <p className="body-large mb-12 text-white/90 animate-slide-up">
+          <p className="body-large mb-8 text-white/90 animate-slide-up">
             {heroContent[currentSlide].subtitle}
           </p>
+        </div>
+        <div className="absolute bottom-8 right-6 animate-zoom-in">
           <CircularButton
-            text="scroll down • scroll down • scroll down • "
+            text="SCROLL DOWN • SCROLL DOWN • SCROLL DOWN • "
             onClick={scrollToNext}
-            className="animate-zoom-in"
           />
         </div>
       </div>
 
-      {/* Pagination Dots */}
-      <div className="fixed top-20 right-6 z-30 flex flex-col space-y-3">
+      {/* Pagination Dots - positioned under hamburger menu */}
+      <div className="fixed top-28 right-6 z-30 flex flex-col space-y-3">
         {heroImages.map((_, index) => (
           <button
             key={index}
@@ -104,13 +105,6 @@ const HeroSection: React.FC = () => {
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
-      </div>
-
-      {/* Brand Logo */}
-      <div className="absolute top-6 left-6 z-30">
-        <h2 className="text-2xl md:text-3xl font-bold text-white">
-          ENP Brands
-        </h2>
       </div>
     </section>
   );

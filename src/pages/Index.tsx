@@ -23,19 +23,18 @@ const Index: React.FC = () => {
       {/* About Section */}
       <section id="about-section" className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+          <div className="max-w-4xl animate-fade-in">
             <h2 className="heading-medium text-corporate-dark mb-8">
               We are the venture and growth capital arm of ENP Brands.
             </h2>
-            <p className="body-large text-corporate-medium mb-12 max-w-3xl mx-auto">
+            <p className="body-large text-corporate-medium mb-12 max-w-3xl">
               We support forward-thinking founders who are crafting brands for the modern consumer. 
               We offer the global reach of ENP Brands and the agility of a skilled venture capital team. 
               The best of both worlds.
             </p>
             <Link to="/about">
               <CircularButton
-                text="read more • read more • read more • read more • "
-                className="mx-auto"
+                text="READ MORE • READ MORE • READ MORE • READ MORE • "
               />
             </Link>
           </div>
@@ -45,11 +44,11 @@ const Index: React.FC = () => {
       {/* Portfolio Section */}
       <section id="portfolio-section" className="py-24 bg-corporate-light">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+          <div className="max-w-4xl animate-fade-in">
             <h2 className="heading-medium text-corporate-dark mb-8">
               We work with some of your favourite brands.
             </h2>
-            <p className="body-large text-corporate-medium mb-16 max-w-3xl mx-auto">
+            <p className="body-large text-corporate-medium mb-16 max-w-3xl">
               We invest in beauty & wellness brands, commerce and technology that serve the modern consumer.
             </p>
             
@@ -70,8 +69,7 @@ const Index: React.FC = () => {
             
             <Link to="/portfolio">
               <CircularButton
-                text="view our portfolio • view our portfolio • "
-                className="mx-auto"
+                text="VIEW OUR PORTFOLIO • VIEW OUR PORTFOLIO • "
               />
             </Link>
           </div>
@@ -81,7 +79,7 @@ const Index: React.FC = () => {
       {/* Contact CTA Section */}
       <section id="contact-section" className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+          <div className="max-w-4xl animate-fade-in">
             <h2 className="heading-medium text-corporate-dark mb-8">
               Got tomorrow's big idea?
             </h2>
@@ -90,8 +88,7 @@ const Index: React.FC = () => {
             </p>
             <Link to="/contact">
               <CircularButton
-                text="get in touch • get in touch • get in touch • "
-                className="mx-auto"
+                text="GET IN TOUCH • GET IN TOUCH • GET IN TOUCH • "
               />
             </Link>
           </div>

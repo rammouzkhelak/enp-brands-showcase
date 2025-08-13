@@ -8,22 +8,22 @@ interface CircularButtonProps {
 }
 
 const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, className = "" }) => {
-  const textLength = text.length;
-  const radius = 35; // Radius for text placement
+  const radius = 60; // Larger radius for bigger buttons
   const circumference = 2 * Math.PI * radius;
+  const textLength = text.length;
   const charSpacing = circumference / textLength;
 
   return (
-    <div className={`circular-button ${className}`} onClick={onClick}>
-      <div className="circular-button-text">
-        <svg width="80" height="80" viewBox="0 0 80 80">
+    <div className={`relative w-32 h-32 cursor-pointer group ${className}`} onClick={onClick}>
+      <div className="absolute inset-0 animate-rotate">
+        <svg width="128" height="128" viewBox="0 0 128 128">
           <defs>
             <path
               id="circle-path"
-              d="M 40,40 m -35,0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"
+              d="M 64,64 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"
             />
           </defs>
-          <text className="text-xs font-medium fill-current">
+          <text className="text-xs font-semibold fill-current uppercase tracking-wider">
             <textPath href="#circle-path" startOffset="0%">
               {text.split("").map((char, index) => (
                 <tspan key={index} dx={index === 0 ? "0" : `${charSpacing - 8}px`}>
@@ -34,7 +34,9 @@ const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, classNam
           </text>
         </svg>
       </div>
-      <ArrowRight className="circular-button-arrow" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <ArrowRight className="w-6 h-6 text-current transition-transform group-hover:scale-110" />
+      </div>
     </div>
   );
 };

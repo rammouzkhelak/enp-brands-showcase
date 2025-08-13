@@ -128,31 +128,13 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Circular rotating button */
-  .circular-button {
-    @apply relative w-20 h-20 rounded-full border border-foreground flex items-center justify-center cursor-pointer;
+  /* Custom button hover effects */
+  .hover-scale {
     transition: var(--transition-button);
   }
   
-  .circular-button:hover {
+  .hover-scale:hover {
     @apply scale-110;
-  }
-  
-  .circular-button-text {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    animation: rotate 15s linear infinite;
-  }
-  
-  .circular-button-text svg {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .circular-button-arrow {
-    @apply w-4 h-4 text-foreground;
-    z-index: 10;
   }
   
   /* Hero section overlay */

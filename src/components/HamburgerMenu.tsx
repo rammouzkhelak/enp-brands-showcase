@@ -26,17 +26,17 @@ const HamburgerMenu: React.FC = () => {
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className="fixed top-6 right-6 z-50 w-12 h-12 flex flex-col items-center justify-center space-y-1 bg-transparent hover:bg-black/5 transition-colors duration-300 rounded-lg"
+        className="fixed top-10 right-6 z-50 w-16 h-16 flex flex-col items-center justify-center space-y-1.5 bg-transparent hover:bg-black/5 transition-colors duration-300 rounded-lg"
         aria-label="Toggle menu"
       >
         {!isOpen ? (
           <>
-            <span className="w-6 h-0.5 bg-black block transition-all duration-300"></span>
-            <span className="w-6 h-0.5 bg-black block transition-all duration-300"></span>
-            <span className="w-6 h-0.5 bg-black block transition-all duration-300"></span>
+            <span className="w-8 h-0.5 bg-black block transition-all duration-300"></span>
+            <span className="w-8 h-0.5 bg-black block transition-all duration-300"></span>
+            <span className="w-8 h-0.5 bg-black block transition-all duration-300"></span>
           </>
         ) : (
-          <X className="w-6 h-6 text-white" />
+          <X className="w-8 h-8 text-white" />
         )}
       </button>
 
@@ -68,18 +68,12 @@ const HamburgerMenu: React.FC = () => {
         </div>
       </div>
 
-      {/* Pagination Dots for Hero Section */}
-      {location.pathname === "/" && (
-        <div className="fixed top-20 right-6 z-30 flex flex-col space-y-2">
-          {[1, 2, 3, 4, 5].map((dot, index) => (
-            <button
-              key={dot}
-              className="w-2 h-2 rounded-full bg-black/30 hover:bg-black transition-colors duration-300"
-              aria-label={`Go to slide ${dot}`}
-            />
-          ))}
-        </div>
-      )}
+      {/* Logo - visible on all pages and even when menu is open */}
+      <div className="fixed top-10 left-6 z-50">
+        <h2 className="text-2xl md:text-3xl font-bold text-black">
+          ENP Brands
+        </h2>
+      </div>
     </>
   );
 };
