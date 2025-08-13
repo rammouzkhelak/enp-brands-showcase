@@ -74,7 +74,7 @@ const HeroSection: React.FC = () => {
       ))}
       
       {/* Logo - only visible on hero section */}
-      <div className="absolute top-10 left-6 z-30">
+      <div className="absolute top-10 left-6 z-40">
         <h2 className="text-2xl md:text-3xl font-bold text-white">
           ENP Brands
         </h2>
@@ -100,7 +100,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Pagination Dots - positioned under hamburger menu, only visible on hero */}
-      <div className="absolute top-28 right-6 z-30 flex flex-col space-y-3">
+      <div className="absolute top-28 right-6 z-40 flex flex-col space-y-3">
         {heroImages.map((_, index) => (
           <button
             key={index}

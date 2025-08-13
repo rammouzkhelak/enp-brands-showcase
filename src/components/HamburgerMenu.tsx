@@ -70,7 +70,7 @@ const HamburgerMenu: React.FC = () => {
 
       {/* Logo - visible on all pages except home where it only shows on hero section */}
       {location.pathname !== '/' && (
-        <div className="absolute top-10 left-6 z-50 transition-opacity duration-300">
+        <div className="fixed top-10 left-6 z-50 transition-opacity duration-300">
           <Link to="/" className={`text-2xl md:text-3xl font-bold hover:opacity-80 transition-opacity ${location.pathname === '/contact' ? 'text-white' : 'text-black'}`}>
             ENP Brands
           </Link>
