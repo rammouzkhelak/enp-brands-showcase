@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 import { ArrowRight, ArrowDown } from "lucide-react";
 
 interface CircularButtonProps {
@@ -11,7 +11,7 @@ interface CircularButtonProps {
 const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, className = "", arrowDirection = 'right' }) => {
   const radius = 60;
   const circumference = 2 * Math.PI * radius;
-  const pathId = `circle-path-${Math.random().toString(36).substr(2, 9)}`;
+  const pathId = useId();
   
   const handleClick = () => {
     if (onClick) {
