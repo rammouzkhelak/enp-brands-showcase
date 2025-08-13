@@ -91,11 +91,13 @@ const Index: React.FC = () => {
             <p className="body-large text-corporate-medium mb-12">
               We would love to hear from you.
             </p>
-            <Link to="/contact">
-              <CircularButton
-                text="GET IN TOUCH • GET IN TOUCH • GET IN TOUCH • "
-              />
-            </Link>
+            <div className="flex justify-center">
+              <Link to="/contact">
+                <CircularButton
+                  text="GET IN TOUCH • GET IN TOUCH • GET IN TOUCH • "
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

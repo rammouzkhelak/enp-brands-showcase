@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HamburgerMenu from "../components/HamburgerMenu";
 import { ArrowLeft, Mail, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Contact: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <HamburgerMenu />
@@ -11,10 +15,6 @@ const Contact: React.FC = () => {
       {/* Header */}
       <header className="relative py-20 bg-corporate-light">
         <div className="container mx-auto px-6">
-          <Link to="/" className="inline-flex items-center space-x-2 text-corporate-medium hover:text-corporate-dark transition-colors mb-8">
-            <ArrowLeft className="w-5 h-5" />
-            <span>Back to Home</span>
-          </Link>
           <h1 className="heading-large text-corporate-dark">Get In Touch</h1>
           <p className="body-large text-corporate-medium mt-6 max-w-3xl">
             Got tomorrow's big idea? We would love to hear from you.

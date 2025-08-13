@@ -68,14 +68,14 @@ const HamburgerMenu: React.FC = () => {
         </div>
       </div>
 
-      {/* Logo - visible on all pages and even when menu is open, but only on non-home pages when scrolled */}
-      <div className={`fixed top-10 left-6 z-50 transition-opacity duration-300 ${
-        location.pathname === '/' ? 'opacity-0' : 'opacity-100'
-      }`}>
-        <h2 className="text-2xl md:text-3xl font-bold text-black">
-          ENP Brands
-        </h2>
-      </div>
+      {/* Logo - visible on all pages except home where it only shows on hero section */}
+      {location.pathname !== '/' && (
+        <div className={`fixed top-10 left-6 z-50 transition-opacity duration-300`}>
+          <h2 className="text-2xl md:text-3xl font-bold text-black">
+            ENP Brands
+          </h2>
+        </div>
+      )}
     </>
   );
 };
