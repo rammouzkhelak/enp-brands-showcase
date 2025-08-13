@@ -25,8 +25,14 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
 
   // Calculate transform based on scroll position and direction
   const getTransform = () => {
-    const scrollFactor = scrollY * 0.5; // Adjust speed of movement
-    const translateX = direction === 'left' ? -scrollFactor : scrollFactor;
+    const scrollFactor = scrollY * 0.3; // Reduced speed of movement
+    const imageWidth = 384 + 32; // w-96 + space-x-8 = 384px + 32px gap
+    const totalWidth = imageWidth * images.length;
+    
+    // Use modulo to create seamless loop and ensure images are always visible
+    const baseTranslateX = direction === 'left' ? -scrollFactor : scrollFactor;
+    const translateX = baseTranslateX % totalWidth;
+    
     return `translateX(${translateX}px)`;
   };
 
