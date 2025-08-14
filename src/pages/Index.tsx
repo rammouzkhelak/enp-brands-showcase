@@ -34,7 +34,7 @@ const Index: React.FC = () => {
             <h2 className="heading-medium text-corporate-dark mb-4 md:mb-6 text-left">
               Building tomorrow's family brands today.
             </h2>
-            <p className="body-large text-corporate-medium mb-6 md:mb-8 max-w-full md:max-w-3xl text-left">ENP Brands is a dynamic portfolio company specializing in internationally recognized family and children's products. We combine global brand expertise with regional market intelligence to deliver exceptional value across multiple product categories.</p>
+            <p className="body-large text-corporate-medium mb-6 md:mb-8 max-w-full md:max-w-3xl text-left">ENP Brands specializes in internationally recognized family and children's products, combining global expertise with regional market intelligence.</p>
             <Link to="/about">
               <div className="scale-75 md:scale-100 origin-left">
                 <CircularButton text="READ MORE • READ MORE • READ MORE • READ MORE • " />
