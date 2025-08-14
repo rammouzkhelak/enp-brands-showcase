@@ -9,7 +9,7 @@ interface CircularButtonProps {
 }
 
 const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, className = "", arrowDirection = 'right' }) => {
-  const radius = 70;
+  const radius = 65;
   const circumference = 2 * Math.PI * radius;
   const pathId = useId();
   
