@@ -29,12 +29,13 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
     const imageWidth = 448 + 32; // w-112 + space-x-8 = 448px + 32px gap
     const totalWidth = imageWidth * images.length;
     
-    // Create seamless infinite scroll effect
+    // Create seamless infinite scroll effect with proper offset
     const baseTranslateX = direction === 'left' ? -scrollFactor : scrollFactor;
-    const translateX = ((baseTranslateX % totalWidth) + totalWidth) % totalWidth;
-    const finalTranslateX = direction === 'left' ? -translateX : translateX;
+    // Start with negative offset to ensure left coverage
+    const initialOffset = direction === 'left' ? -totalWidth : -totalWidth;
+    const translateX = initialOffset + (baseTranslateX % totalWidth);
     
-    return `translateX(${finalTranslateX}px)`;
+    return `translateX(${translateX}px)`;
   };
 
   return (

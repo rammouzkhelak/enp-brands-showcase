@@ -141,6 +141,9 @@ export default {
 			fontFamily: {
 				'heading': ['Inter', 'system-ui', 'sans-serif'],
 				'body': ['Inter', 'system-ui', 'sans-serif']
+			},
+			width: {
+				'112': '28rem'
 			}
 		}
 	},

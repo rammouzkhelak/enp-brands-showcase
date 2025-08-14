@@ -1,11 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const HamburgerMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const menuItems = [
     { name: "Home", path: "/" },
@@ -37,10 +47,25 @@ const HamburgerMenu: React.FC = () => {
 
   return (
     <>
-      {/* Hamburger Button */}
+      {/* Logo - Always visible at top */}
+      <div className="fixed top-10 left-6 z-50 transition-opacity duration-300">
+        <Link 
+          to="/" 
+          onClick={() => {
+            setTimeout(() => window.scrollTo(0, 0), 100);
+          }}
+          className={`text-2xl md:text-3xl font-bold hover:opacity-80 transition-opacity ${location.pathname === '/contact' ? 'text-white' : 'text-black'}`}
+        >
+          ENP Brands
+        </Link>
+      </div>
+
+      {/* Hamburger Button - Always visible, moves with scroll on home page */}
       <button
         onClick={toggleMenu}
-        className={`fixed top-10 right-6 z-50 w-16 h-16 flex flex-col items-center justify-center space-y-1.5 bg-transparent hover:bg-white/10 transition-colors duration-300 rounded-lg`}
+        className={`fixed right-6 z-50 w-16 h-16 flex flex-col items-center justify-center space-y-1.5 bg-transparent hover:bg-white/10 transition-all duration-300 rounded-lg ${
+          location.pathname === '/' && isScrolled ? 'top-6' : 'top-10'
+        }`}
         aria-label="Toggle menu"
       >
         {!isOpen ? (
@@ -99,20 +124,6 @@ const HamburgerMenu: React.FC = () => {
         </div>
       </div>
 
-      {/* Logo - visible on all pages except home where it only shows on hero section */}
-      {location.pathname !== '/' && (
-        <div className="fixed top-10 left-6 z-50 transition-opacity duration-300">
-          <Link 
-            to="/" 
-            onClick={() => {
-              setTimeout(() => window.scrollTo(0, 0), 100);
-            }}
-            className={`text-2xl md:text-3xl font-bold hover:opacity-80 transition-opacity ${location.pathname === '/contact' ? 'text-white' : 'text-black'}`}
-          >
-            ENP Brands
-          </Link>
-        </div>
-      )}
     </>
   );
 };
