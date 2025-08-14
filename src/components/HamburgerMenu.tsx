@@ -56,7 +56,7 @@ const HamburgerMenu: React.FC = () => {
 
       {/* Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-black/95 backdrop-blur-sm z-40 transition-all duration-500 ${
+        className={`fixed inset-0 bg-black z-40 transition-all duration-500 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
