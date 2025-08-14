@@ -83,8 +83,8 @@ const Index: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform transition-all duration-300 group-hover:-translate-y-2">
-                    <h3 className="text-2xl font-bold mb-2 transition-all duration-300">Vital Baby</h3>
-                    <p className="text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
+                    <h3 className="text-4xl font-bold mb-2 transition-all duration-300">Vital Baby</h3>
+                    <p className="text-lg opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
                       Baby feeding and care
                     </p>
                   </div>
@@ -98,8 +98,8 @@ const Index: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform transition-all duration-300 group-hover:-translate-y-2">
-                    <h3 className="text-2xl font-bold mb-2 transition-all duration-300">Infantino</h3>
-                    <p className="text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
+                    <h3 className="text-4xl font-bold mb-2 transition-all duration-300">Infantino</h3>
+                    <p className="text-lg opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
                       Smart baby products
                     </p>
                   </div>
@@ -116,8 +116,8 @@ const Index: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform transition-all duration-300 group-hover:-translate-y-2">
-                    <h3 className="text-xl font-bold mb-1 transition-all duration-300">Headu</h3>
-                    <p className="text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
+                    <h3 className="text-2xl font-bold mb-1 transition-all duration-300">Headu</h3>
+                    <p className="text-base opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
                       Educational games for children
                     </p>
                   </div>
@@ -131,8 +131,8 @@ const Index: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform transition-all duration-300 group-hover:-translate-y-2">
-                    <h3 className="text-xl font-bold mb-1 transition-all duration-300">Huffy</h3>
-                    <p className="text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
+                    <h3 className="text-2xl font-bold mb-1 transition-all duration-300">Huffy</h3>
+                    <p className="text-base opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
                       Bicycles for all ages
                     </p>
                   </div>
@@ -146,8 +146,8 @@ const Index: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform transition-all duration-300 group-hover:-translate-y-2">
-                    <h3 className="text-xl font-bold mb-1 transition-all duration-300">Multiprint</h3>
-                    <p className="text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
+                    <h3 className="text-2xl font-bold mb-1 transition-all duration-300">Multiprint</h3>
+                    <p className="text-base opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
                       Creative art supplies
                     </p>
                   </div>
