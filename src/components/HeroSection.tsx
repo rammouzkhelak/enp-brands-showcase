@@ -73,12 +73,6 @@ const HeroSection: React.FC = () => {
         </div>
       ))}
       
-      {/* Logo - only visible on hero section */}
-      <div className="absolute top-10 left-6 z-40">
-        <h2 className="text-2xl md:text-3xl font-bold text-white">
-          ENP Brands
-        </h2>
-      </div>
       
       {/* Content */}
       <div className="relative z-10 h-full text-white px-6">

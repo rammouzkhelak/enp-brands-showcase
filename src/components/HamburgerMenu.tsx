@@ -56,7 +56,9 @@ const HamburgerMenu: React.FC = () => {
           onClick={() => {
             setTimeout(() => window.scrollTo(0, 0), 100);
           }}
-          className={`text-2xl md:text-3xl font-bold hover:opacity-80 transition-opacity ${location.pathname === '/contact' ? 'text-white' : 'text-black'}`}
+          className={`text-2xl md:text-3xl font-bold hover:opacity-80 transition-opacity ${
+            location.pathname === '/' || location.pathname === '/contact' ? 'text-white' : 'text-black'
+          }`}
         >
           ENP Brands
         </Link>
@@ -72,9 +74,15 @@ const HamburgerMenu: React.FC = () => {
       >
         {!isOpen ? (
           <>
-            <span className={`w-8 h-0.5 block transition-all duration-300 ${location.pathname === '/contact' ? 'bg-white' : 'bg-black'}`}></span>
-            <span className={`w-8 h-0.5 block transition-all duration-300 ${location.pathname === '/contact' ? 'bg-white' : 'bg-black'}`}></span>
-            <span className={`w-8 h-0.5 block transition-all duration-300 ${location.pathname === '/contact' ? 'bg-white' : 'bg-black'}`}></span>
+            <span className={`w-8 h-0.5 block transition-all duration-300 ${
+              location.pathname === '/' || location.pathname === '/contact' ? 'bg-white' : 'bg-black'
+            }`}></span>
+            <span className={`w-8 h-0.5 block transition-all duration-300 ${
+              location.pathname === '/' || location.pathname === '/contact' ? 'bg-white' : 'bg-black'
+            }`}></span>
+            <span className={`w-8 h-0.5 block transition-all duration-300 ${
+              location.pathname === '/' || location.pathname === '/contact' ? 'bg-white' : 'bg-black'
+            }`}></span>
           </>
         ) : (
           <X className="w-8 h-8 text-white" />
