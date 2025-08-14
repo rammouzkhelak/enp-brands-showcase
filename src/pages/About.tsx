@@ -14,17 +14,17 @@ const About: React.FC = () => {
 
   // Sample images for carousels - you can replace with actual brand images
   const carouselImages1 = [
-    "/lovable-uploads/809c785e-28aa-455f-a593-c2397c23f4a3.png",
-    "/lovable-uploads/298b60f0-ce09-4bd0-9014-48cc5ce67550.png",
-    "/lovable-uploads/809c785e-28aa-455f-a593-c2397c23f4a3.png",
-    "/lovable-uploads/298b60f0-ce09-4bd0-9014-48cc5ce67550.png"
+    "/lovable-uploads/6cd66727-48bb-40cf-a586-82b68fa5d1fe.png",
+    "/lovable-uploads/9f976a2b-ac9a-4a4f-b977-9cd4ab090c6e.png",
+    "/lovable-uploads/9a73e0e4-4d3c-4265-bb45-b431ae53f09b.png",
+    "/lovable-uploads/fff7021e-a66f-4398-8b9e-6e638c4c72e3.png"
   ];
 
   const carouselImages2 = [
-    "/lovable-uploads/298b60f0-ce09-4bd0-9014-48cc5ce67550.png",
-    "/lovable-uploads/809c785e-28aa-455f-a593-c2397c23f4a3.png",
-    "/lovable-uploads/298b60f0-ce09-4bd0-9014-48cc5ce67550.png",
-    "/lovable-uploads/809c785e-28aa-455f-a593-c2397c23f4a3.png"
+    "/lovable-uploads/a3eef069-8728-4faf-a91b-07add9b3134e.png",
+    "/lovable-uploads/8ede48e7-2afc-4717-a209-6ad2831b996d.png",
+    "/lovable-uploads/1d85af8f-4c2f-4226-8cdf-a0f2154e2174.png",
+    "/lovable-uploads/d54656d5-b796-4a73-bce3-295fb5ed91a5.png"
   ];
 
   return (
