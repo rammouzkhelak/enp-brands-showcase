@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Second Section: Our Locations */}
-      <section id="locations-section" className="pt-10 pb-20 px-6">
+      <section id="locations-section" className="pt-6 pb-20 px-6">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Our locations</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

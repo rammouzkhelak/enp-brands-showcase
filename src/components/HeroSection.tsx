@@ -82,7 +82,7 @@ const HeroSection: React.FC = () => {
       
       {/* Content */}
       <div className="relative z-10 h-full text-white px-6">
-        <div className="absolute bottom-8 left-12 right-12 max-w-5xl animate-fade-in">
+        <div className="absolute bottom-8 left-16 right-16 max-w-4xl animate-fade-in">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 animate-slide-up">
             {heroContent[currentSlide].title}
           </h1>
@@ -90,7 +90,7 @@ const HeroSection: React.FC = () => {
             {heroContent[currentSlide].subtitle}
           </p>
         </div>
-        <div className="absolute bottom-8 right-12 animate-zoom-in">
+        <div className="absolute bottom-8 right-16 animate-zoom-in">
           <CircularButton
             text="SCROLL DOWN • SCROLL DOWN • SCROLL DOWN • "
             onClick={scrollToNext}
