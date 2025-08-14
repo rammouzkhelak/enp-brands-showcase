@@ -100,7 +100,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Pagination Dots - positioned under hamburger menu, only visible on hero */}
-      <div className="absolute top-28 right-6 z-40 flex flex-col space-y-3">
+      <div className="absolute top-28 right-6 z-30 flex flex-col space-y-3">
         {heroImages.map((_, index) => (
           <button
             key={index}
