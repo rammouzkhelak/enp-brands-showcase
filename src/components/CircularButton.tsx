@@ -9,7 +9,7 @@ interface CircularButtonProps {
 }
 
 const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, className = "", arrowDirection = 'right' }) => {
-  const radius = 55;
+  const radius = 62;
   const circumference = 2 * Math.PI * radius;
   const pathId = useId();
   
@@ -28,7 +28,7 @@ const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, classNam
     <div className={`relative w-40 h-40 cursor-pointer group ${className}`} onClick={handleClick}>
       {/* Hover background circle */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-32 h-32 rounded-full bg-black scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
+        <div className="w-28 h-28 rounded-full bg-black scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
       </div>
       
       <div className="absolute inset-0 animate-rotate">
@@ -36,7 +36,7 @@ const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, classNam
           <defs>
             <path
               id={pathId}
-              d="M 80,80 m -55,0 a 55,55 0 1,1 110,0 a 55,55 0 1,1 -110,0"
+              d="M 80,80 m -62,0 a 62,62 0 1,1 124,0 a 62,62 0 1,1 -124,0"
             />
           </defs>
           <text className="text-[9px] font-bold fill-current uppercase tracking-wide" style={{ letterSpacing: '0.12em' }}>
