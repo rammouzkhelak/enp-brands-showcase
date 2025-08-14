@@ -85,7 +85,7 @@ const Index: React.FC = () => {
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform transition-all duration-300 group-hover:-translate-y-2">
                     <h3 className="text-2xl font-bold mb-2 transition-all duration-300">Vital Baby</h3>
                     <p className="text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
-                      Skincare with natural and organic ingredients
+                      Baby feeding and care
                     </p>
                   </div>
                 </div>
@@ -100,7 +100,7 @@ const Index: React.FC = () => {
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform transition-all duration-300 group-hover:-translate-y-2">
                     <h3 className="text-2xl font-bold mb-2 transition-all duration-300">Infantino</h3>
                     <p className="text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
-                      Groceries delivered in as little as one hour
+                      Smart baby products
                     </p>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ const Index: React.FC = () => {
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform transition-all duration-300 group-hover:-translate-y-2">
                     <h3 className="text-xl font-bold mb-1 transition-all duration-300">Headu</h3>
                     <p className="text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
-                      Hair wellness supplements
+                      Educational games for children
                     </p>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ const Index: React.FC = () => {
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform transition-all duration-300 group-hover:-translate-y-2">
                     <h3 className="text-xl font-bold mb-1 transition-all duration-300">Huffy</h3>
                     <p className="text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
-                      Australian made coffee scrubs
+                      Bicycles for all ages
                     </p>
                   </div>
                 </div>
@@ -148,7 +148,7 @@ const Index: React.FC = () => {
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform transition-all duration-300 group-hover:-translate-y-2">
                     <h3 className="text-xl font-bold mb-1 transition-all duration-300">Multiprint</h3>
                     <p className="text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
-                      Modern skincare and beauty
+                      Creative art supplies
                     </p>
                   </div>
                 </div>
