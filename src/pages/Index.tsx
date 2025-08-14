@@ -59,7 +59,7 @@ const Index: React.FC = () => {
                   We work with some of your favourite brands.
                 </h2>
                 <p className="body-large text-corporate-medium max-w-full md:max-w-3xl text-left mb-4 md:mb-0">
-                  We invest in beauty & wellness brands, commerce and technology that serve the modern consumer.
+                  Our diverse portfolio spans educational toys, baby care, bicycles, and creative products - covering the complete family lifestyle ecosystem.
                 </p>
               </div>
               <div className="md:ml-8">
