@@ -139,8 +139,9 @@ export default {
 				'zoom-in': 'zoom-in 0.5s ease-out'
 			},
 			fontFamily: {
-				'heading': ['Inter', 'system-ui', 'sans-serif'],
-				'body': ['Inter', 'system-ui', 'sans-serif']
+				'heading': ['roc-grotesk', 'sans-serif'],
+				'body': ['Rubik', 'sans-serif'],
+				'display': ['aktiv-grotesk', 'sans-serif']
 			},
 			width: {
 				'112': '28rem'

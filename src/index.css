@@ -53,8 +53,9 @@ All colors MUST be HSL.
     --transition-button: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
     /* Typography */
-    --font-heading: 'Inter', system-ui, sans-serif;
-    --font-body: 'Inter', system-ui, sans-serif;
+    --font-heading: 'roc-grotesk', sans-serif;
+    --font-body: 'Rubik', sans-serif;
+    --font-display: 'aktiv-grotesk', sans-serif;
 
     --sidebar-background: 0 0% 98%;
 
