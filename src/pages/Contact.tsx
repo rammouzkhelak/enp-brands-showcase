@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
       <HamburgerMenu />
       
       {/* First Section: Hero with Email and Scroll Button */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 relative">
+      <section className="h-[80vh] flex flex-col items-center justify-center px-6 relative">
         <div className="max-w-6xl mx-auto w-full">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
             {/* Left side: Heading and Email */}
