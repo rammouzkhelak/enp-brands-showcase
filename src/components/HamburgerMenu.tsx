@@ -47,8 +47,10 @@ const HamburgerMenu: React.FC = () => {
 
   return (
     <>
-      {/* Logo - Always visible at top */}
-      <div className="fixed top-10 left-6 z-50 transition-opacity duration-300">
+      {/* Logo - Only visible when at top of page */}
+      <div className={`fixed top-10 left-6 z-50 transition-opacity duration-300 ${
+        isScrolled ? 'opacity-0 invisible' : 'opacity-100 visible'
+      }`}>
         <Link 
           to="/" 
           onClick={() => {
