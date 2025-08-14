@@ -93,7 +93,7 @@ const Index: React.FC = () => {
                 
                 <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-80 animate-fade-in" style={{ animationDelay: '0.1s' }}>
                   <img 
-                    src="/lovable-uploads/74757dff-8110-475b-a409-4cf70a29a793.png" 
+                    src="/lovable-uploads/49710c6d-d9d0-4a23-9469-98562b904904.png" 
                     alt="Infantino"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
