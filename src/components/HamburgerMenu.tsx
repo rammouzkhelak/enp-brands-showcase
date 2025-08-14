@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 
 const HamburgerMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const location = useLocation();
 
   const menuItems = [
@@ -14,11 +15,24 @@ const HamburgerMenu: React.FC = () => {
   ];
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    if (isOpen) {
+      handleClose();
+    } else {
+      setIsOpen(true);
+      setIsClosing(false);
+    }
+  };
+
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsOpen(false);
+      setIsClosing(false);
+    }, 600); // Wait for closing animation to complete
   };
 
   const closeMenu = () => {
-    setIsOpen(false);
+    handleClose();
   };
 
   return (
@@ -45,24 +59,41 @@ const HamburgerMenu: React.FC = () => {
         className={`fixed inset-0 bg-black/95 backdrop-blur-sm z-40 transition-all duration-500 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
-        onClick={closeMenu}
       >
         <div className="flex items-center justify-center min-h-screen">
           <nav className="text-center">
             <ul className="space-y-8">
-              {menuItems.map((item, index) => (
-                <li key={item.name} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <Link
-                    to={item.path}
-                    onClick={closeMenu}
-                    className={`text-4xl md:text-6xl font-bold transition-all duration-300 hover:text-gray-300 block ${
-                      location.pathname === item.path ? "text-white" : "text-white/70"
+              {menuItems.map((item, index) => {
+                const openDelay = index * 0.1;
+                const closeDelay = isClosing ? (menuItems.length - 1 - index) * 0.1 : 0;
+                
+                return (
+                  <li 
+                    key={item.name} 
+                    className={`transition-all duration-300 ${
+                      isClosing 
+                        ? 'animate-fade-out' 
+                        : isOpen 
+                          ? 'animate-fade-in' 
+                          : 'opacity-0'
                     }`}
+                    style={{ 
+                      animationDelay: isClosing ? `${closeDelay}s` : `${openDelay}s`,
+                      animationFillMode: 'both'
+                    }}
                   >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
+                    <Link
+                      to={item.path}
+                      onClick={closeMenu}
+                      className={`text-4xl md:text-6xl font-bold transition-all duration-300 hover:text-gray-300 block ${
+                        location.pathname === item.path ? "text-white" : "text-white/70"
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
         </div>
