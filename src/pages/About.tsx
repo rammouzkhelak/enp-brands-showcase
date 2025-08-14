@@ -145,8 +145,12 @@ const About: React.FC = () => {
               </h3>
             </div>
 
+          </div>
+          
+          {/* Centered bottom row with items 4 and 5 */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
             {/* Item 4 */}
-            <div className="text-center md:col-start-1 md:col-end-2 md:row-start-2">
+            <div className="text-center">
               <div className="w-20 h-20 bg-corporate-dark rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
                 4
               </div>
@@ -156,7 +160,7 @@ const About: React.FC = () => {
             </div>
 
             {/* Item 5 */}
-            <div className="text-center md:col-start-2 md:col-end-3 md:row-start-2">
+            <div className="text-center">
               <div className="w-20 h-20 bg-corporate-dark rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
                 5
               </div>
