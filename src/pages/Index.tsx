@@ -27,52 +27,56 @@ const Index: React.FC = () => {
       <HeroSection />
 
       {/* About Section */}
-      <section id="about-section" className="py-16 bg-white">
+      <section id="about-section" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl ml-16 animate-fade-in">
-            <h2 className="heading-medium text-corporate-dark mb-8">
+          <div className="max-w-4xl ml-0 md:ml-16 animate-fade-in">
+            <h2 className="heading-medium text-corporate-dark mb-6 md:mb-8 text-left">
               We are the venture and growth capital arm of ENP Brands.
             </h2>
-            <p className="body-large text-corporate-medium mb-12 max-w-3xl">
+            <p className="body-large text-corporate-medium mb-8 md:mb-12 max-w-full md:max-w-3xl text-left">
               We support forward-thinking founders who are crafting brands for the modern consumer. 
               We offer the global reach of ENP Brands and the agility of a skilled venture capital team. 
               The best of both worlds.
             </p>
             <Link to="/about">
-              <CircularButton
-                text="READ MORE • READ MORE • READ MORE • READ MORE • "
-              />
+              <div className="scale-75 md:scale-100 origin-left">
+                <CircularButton
+                  text="READ MORE • READ MORE • READ MORE • READ MORE • "
+                />
+              </div>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio-section" className="py-16 bg-corporate-light">
+      <section id="portfolio-section" className="py-12 md:py-16 bg-corporate-light">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl ml-16 animate-fade-in">
-            <div className="flex items-start justify-between mb-16">
-              <div className="flex-1">
-                <h2 className="heading-medium text-corporate-dark mb-8">
+          <div className="max-w-4xl ml-0 md:ml-16 animate-fade-in">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-12 md:mb-16">
+              <div className="flex-1 mb-8 md:mb-0">
+                <h2 className="heading-medium text-corporate-dark mb-6 md:mb-8 text-left">
                   We work with some of your favourite brands.
                 </h2>
-                <p className="body-large text-corporate-medium max-w-3xl">
+                <p className="body-large text-corporate-medium max-w-full md:max-w-3xl text-left mb-6 md:mb-0">
                   We invest in beauty & wellness brands, commerce and technology that serve the modern consumer.
                 </p>
               </div>
-              <div className="ml-8">
+              <div className="md:ml-8">
                 <Link to="/portfolio">
-                  <CircularButton
-                    text="VIEW OUR PORTFOLIO • VIEW OUR PORTFOLIO • "
-                  />
+                  <div className="scale-75 md:scale-100 origin-left">
+                    <CircularButton
+                      text="VIEW OUR PORTFOLIO • VIEW OUR PORTFOLIO • "
+                    />
+                  </div>
                 </Link>
               </div>
             </div>
             
             {/* Brand Grid */}
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               {/* Top Row - 2 Large Images */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 justify-items-center">
                 <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-80 animate-fade-in">
                   <img 
                     src={trueBotanicalsImg} 
@@ -105,7 +109,7 @@ const Index: React.FC = () => {
               </div>
               
               {/* Bottom Row - 3 Smaller Images */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
                 <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-64 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                   <img 
                     src={nutrafolImg} 
@@ -157,20 +161,22 @@ const Index: React.FC = () => {
       </section>
 
       {/* Contact CTA Section */}
-      <section id="contact-section" className="py-16 bg-white">
+      <section id="contact-section" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h2 className="heading-medium text-corporate-dark mb-8">
+          <div className="max-w-4xl mx-auto text-left md:text-center animate-fade-in">
+            <h2 className="heading-medium text-corporate-dark mb-6 md:mb-8">
               Got tomorrow's big idea?
             </h2>
-            <p className="body-large text-corporate-medium mb-12">
+            <p className="body-large text-corporate-medium mb-8 md:mb-12">
               We would love to hear from you.
             </p>
-            <div className="flex justify-center">
+            <div className="flex justify-start md:justify-center">
               <Link to="/contact">
-                <CircularButton
-                  text="GET IN TOUCH • GET IN TOUCH • GET IN TOUCH • "
-                />
+                <div className="scale-75 md:scale-100 origin-left">
+                  <CircularButton
+                    text="GET IN TOUCH • GET IN TOUCH • GET IN TOUCH • "
+                  />
+                </div>
               </Link>
             </div>
           </div>

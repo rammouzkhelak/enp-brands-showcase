@@ -55,7 +55,7 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative h-[70vh] md:h-screen overflow-hidden">
       {/* Hero Images */}
       {heroImages.map((image, index) => (
         <div
@@ -76,15 +76,15 @@ const HeroSection: React.FC = () => {
       
       {/* Content */}
       <div className="relative z-10 h-full text-white px-6">
-        <div className="absolute bottom-16 left-16 right-16 max-w-4xl animate-fade-in">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 animate-slide-up">
+        <div className="absolute bottom-8 md:bottom-16 left-6 md:left-16 right-6 md:right-16 max-w-4xl animate-fade-in">
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 animate-slide-up">
             {heroContent[currentSlide].title}
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-white/90 animate-slide-up leading-relaxed">
+          <p className="text-lg md:text-2xl lg:text-3xl mb-6 md:mb-8 text-white/90 animate-slide-up leading-relaxed">
             {heroContent[currentSlide].subtitle}
           </p>
         </div>
-        <div className="absolute bottom-16 right-20 animate-zoom-in">
+        <div className="hidden md:block absolute bottom-16 right-20 animate-zoom-in">
           <CircularButton
             text="SCROLL DOWN • SCROLL DOWN • SCROLL DOWN • "
             onClick={scrollToNext}
