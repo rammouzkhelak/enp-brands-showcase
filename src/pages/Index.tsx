@@ -30,10 +30,10 @@ const Index: React.FC = () => {
       <section id="about-section" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl ml-0 md:ml-16 animate-fade-in">
-            <h2 className="heading-medium text-corporate-dark mb-6 md:mb-8 text-left">
+            <h2 className="heading-medium text-corporate-dark mb-4 md:mb-6 text-left">
               We are the venture and growth capital arm of ENP Brands.
             </h2>
-            <p className="body-large text-corporate-medium mb-8 md:mb-12 max-w-full md:max-w-3xl text-left">
+            <p className="body-large text-corporate-medium mb-6 md:mb-8 max-w-full md:max-w-3xl text-left">
               We support forward-thinking founders who are crafting brands for the modern consumer. 
               We offer the global reach of ENP Brands and the agility of a skilled venture capital team. 
               The best of both worlds.
@@ -53,12 +53,12 @@ const Index: React.FC = () => {
       <section id="portfolio-section" className="py-12 md:py-16 bg-corporate-light">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl ml-0 md:ml-16 animate-fade-in">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-12 md:mb-16">
-              <div className="flex-1 mb-8 md:mb-0">
-                <h2 className="heading-medium text-corporate-dark mb-6 md:mb-8 text-left">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-8 md:mb-12">
+              <div className="flex-1 mb-6 md:mb-0">
+                <h2 className="heading-medium text-corporate-dark mb-4 md:mb-6 text-left">
                   We work with some of your favourite brands.
                 </h2>
-                <p className="body-large text-corporate-medium max-w-full md:max-w-3xl text-left mb-6 md:mb-0">
+                <p className="body-large text-corporate-medium max-w-full md:max-w-3xl text-left mb-4 md:mb-0">
                   We invest in beauty & wellness brands, commerce and technology that serve the modern consumer.
                 </p>
               </div>
@@ -163,16 +163,16 @@ const Index: React.FC = () => {
       {/* Contact CTA Section */}
       <section id="contact-section" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-left md:text-center animate-fade-in">
-            <h2 className="heading-medium text-corporate-dark mb-6 md:mb-8">
+          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <h2 className="heading-medium text-corporate-dark mb-4 md:mb-6">
               Got tomorrow's big idea?
             </h2>
-            <p className="body-large text-corporate-medium mb-8 md:mb-12">
+            <p className="body-large text-corporate-medium mb-6 md:mb-8">
               We would love to hear from you.
             </p>
-            <div className="flex justify-start md:justify-center">
+            <div className="flex justify-center">
               <Link to="/contact">
-                <div className="scale-75 md:scale-100 origin-left">
+                <div className="scale-75 md:scale-100">
                   <CircularButton
                     text="GET IN TOUCH • GET IN TOUCH • GET IN TOUCH • "
                   />
