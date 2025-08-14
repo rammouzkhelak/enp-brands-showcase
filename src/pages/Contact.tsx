@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
       {/* Third Section: Find Us Online */}
       <section className="py-20 px-6 border-t border-gray-800">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12">Find us online</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-12">Our B2C Store</h2>
           
           {/* Website Link */}
           <div className="flex justify-center">
