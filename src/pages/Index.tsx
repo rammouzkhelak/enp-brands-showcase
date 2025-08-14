@@ -10,6 +10,7 @@ import instacartImg from "../assets/brands/instacart.jpg";
 import nutrafolImg from "../assets/brands/nutrafol.jpg";
 import frankBodyImg from "../assets/brands/frank-body.jpg";
 import plumImg from "../assets/brands/plum.jpg";
+
 const Index: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -19,6 +20,7 @@ const Index: React.FC = () => {
       });
     }
   };
+
   return <div className="min-h-screen bg-background overflow-x-hidden">
       <HamburgerMenu />
       
@@ -30,7 +32,7 @@ const Index: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl ml-0 md:ml-16 animate-fade-in">
             <h2 className="heading-medium text-corporate-dark mb-4 md:mb-6 text-left">
-              We are the venture and growth capital arm of ENP Brands.
+              Building tomorrow's family brands today.
             </h2>
             <p className="body-large text-corporate-medium mb-6 md:mb-8 max-w-full md:max-w-3xl text-left">ENP Brands is a dynamic portfolio company specializing in internationally recognized family and children's products. We combine global brand expertise with regional market intelligence to deliver exceptional value across multiple product categories.</p>
             <Link to="/about">
@@ -163,4 +165,5 @@ const Index: React.FC = () => {
       <Footer />
     </div>;
 };
+
 export default Index;
