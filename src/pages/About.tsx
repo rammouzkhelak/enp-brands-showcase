@@ -32,10 +32,10 @@ const About: React.FC = () => {
       <HamburgerMenu />
       
       {/* About Section */}
-      <section className="py-12 bg-background">
+      <section className="py-8 bg-background">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-sm uppercase tracking-wider text-corporate-medium mb-8">ABOUT</p>
-          <h1 className="text-4xl md:text-6xl font-bold text-corporate-dark mb-8 max-w-5xl mx-auto leading-tight">
+          <p className="text-sm uppercase tracking-wider text-corporate-medium mb-6">ABOUT</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-corporate-dark mb-6 max-w-5xl mx-auto leading-tight">
             Building brands and scaling businesses is in our DNA
           </h1>
           <p className="text-lg text-corporate-medium max-w-4xl mx-auto leading-relaxed">
@@ -49,19 +49,19 @@ const About: React.FC = () => {
       </section>
 
       {/* First Carousel Section */}
-      <section className="py-24 bg-white overflow-hidden">
+      <section className="py-16 bg-white overflow-hidden">
         <ScrollCarousel 
           images={carouselImages1} 
           direction="right"
-          className="py-16"
+          className="py-8"
         />
       </section>
 
       {/* What We Look For Section */}
-      <section className="py-12 bg-background">
+      <section className="py-8 bg-background">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-corporate-dark mb-8">What we look for</h2>
-          <p className="text-lg text-corporate-medium max-w-4xl mx-auto mb-16 leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold text-corporate-dark mb-6">What we look for</h2>
+          <p className="text-lg text-corporate-medium max-w-4xl mx-auto mb-12 leading-relaxed">
             We are seeking to back the brands of tomorrow and the technologies that enable them to succeed in 
             large markets.
           </p>
@@ -101,19 +101,19 @@ const About: React.FC = () => {
       </section>
 
       {/* Second Carousel Section */}
-      <section className="py-24 bg-white overflow-hidden">
+      <section className="py-16 bg-white overflow-hidden">
         <ScrollCarousel 
           images={carouselImages2} 
           direction="left"
-          className="py-16"
+          className="py-8"
         />
       </section>
 
       {/* What We Offer Section */}
-      <section className="py-12 bg-white">
+      <section className="py-8 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-corporate-dark mb-6">What we offer</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-corporate-dark mb-4">What we offer</h2>
             <p className="text-lg text-corporate-medium max-w-4xl mx-auto leading-relaxed">
               We are value-added partners and can leverage our extensive networks to support our portfolio companies 
               as they grow. We serve as a nexus between our companies and enable our founders to learn from each 
@@ -176,35 +176,39 @@ const About: React.FC = () => {
       </section>
 
       {/* Team and Portfolio Section */}
-      <section className="py-12 bg-background">
+      <section className="py-8 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Contact Us Card */}
-            <div className="bg-white p-12 border-4 border-corporate-dark">
-              <h2 className="text-3xl md:text-4xl font-bold text-corporate-dark mb-6">Contact Us</h2>
-              <p className="text-lg text-corporate-medium mb-8 leading-relaxed">
-                Got tomorrow's big idea? We want to hear from you. Let's build something extraordinary together.
-              </p>
-              <div className="flex justify-end">
+            <div className="relative bg-white border-4 border-corporate-dark h-64">
+              <div className="p-8 h-full flex flex-col">
+                <h2 className="text-2xl md:text-3xl font-bold text-corporate-dark mb-4">Contact Us</h2>
+                <p className="text-base text-corporate-medium leading-relaxed flex-1">
+                  Got tomorrow's big idea? We want to hear from you. Let's build something extraordinary together.
+                </p>
+              </div>
+              <div className="absolute -bottom-6 -right-6">
                 <CircularButton 
                   text="GET IN TOUCH • GET IN TOUCH • " 
                   onClick={() => navigate('/contact')}
-                  className="text-corporate-dark"
+                  className="text-corporate-dark scale-75"
                 />
               </div>
             </div>
 
             {/* Portfolio Card */}
-            <div className="bg-white p-12 border-4 border-corporate-dark">
-              <h2 className="text-3xl md:text-4xl font-bold text-corporate-dark mb-6">Our Portfolio</h2>
-              <p className="text-lg text-corporate-medium mb-8 leading-relaxed">
-                Discover our brand crafters, change leaders and commerce trail blazers.
-              </p>
-              <div className="flex justify-end">
+            <div className="relative bg-white border-4 border-corporate-dark h-64">
+              <div className="p-8 h-full flex flex-col">
+                <h2 className="text-2xl md:text-3xl font-bold text-corporate-dark mb-4">Our Portfolio</h2>
+                <p className="text-base text-corporate-medium leading-relaxed flex-1">
+                  Discover our brand crafters, change leaders and commerce trail blazers.
+                </p>
+              </div>
+              <div className="absolute -bottom-6 -right-6">
                 <CircularButton 
                   text="VIEW OUR PORTFOLIO • VIEW OUR PORTFOLIO • " 
                   onClick={() => navigate('/portfolio')}
-                  className="text-corporate-dark"
+                  className="text-corporate-dark scale-75"
                 />
               </div>
             </div>
