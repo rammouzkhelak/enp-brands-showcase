@@ -68,7 +68,7 @@ const About: React.FC = () => {
                 Learning & Development Products
               </h3>
               <p className="text-corporate-medium leading-relaxed">
-                Relatable and authentic emerging brands operating across the digital and physical worlds
+                Educational toys and learning tools that help children grow through play and creative activities.
               </p>
             </div>
 
@@ -78,7 +78,7 @@ const About: React.FC = () => {
                 Family Safety & Recreation
               </h3>
               <p className="text-corporate-medium leading-relaxed">
-                Services and technologies that enhance the consumer experience and transform commerce
+                Baby care products and outdoor recreation items that keep families safe while having fun together.
               </p>
             </div>
 
@@ -88,7 +88,7 @@ const About: React.FC = () => {
                 Smart Solutions & Creative Tools
               </h3>
               <p className="text-corporate-medium leading-relaxed">
-                Advanced Enterprise Technologies that allow higher reach, streamline processes or boost efficiencies
+                Practical baby products and creative materials that make parenting easier while sparking children's imagination.
               </p>
             </div>
           </div>
