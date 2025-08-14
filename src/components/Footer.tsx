@@ -16,10 +16,10 @@ const Footer: React.FC = () => {
             {/* Locations */}
             <div className="text-center">
               <h3 className="text-sm font-semibold text-white/70 uppercase tracking-wider mb-4">
-                Locations
+                Location
               </h3>
               <p className="text-xl font-semibold text-white">
-                London & New York
+                Lebanon
               </p>
             </div>
             
