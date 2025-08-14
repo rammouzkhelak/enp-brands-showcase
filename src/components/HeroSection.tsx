@@ -14,23 +14,23 @@ const HeroSection: React.FC = () => {
   const heroContent = [
     {
       title: "Essential Baby Care",
-      subtitle: "Safe, practical products for feeding, hygiene, and everyday baby needs."
+      subtitle: "Safe products for feeding and baby hygiene"
     },
     {
-      title: "Crafting Childhood Moments",
-      subtitle: "Innovative solutions for growing families"
+      title: "Smart Baby Solutions",
+      subtitle: "Thoughtfully designed products for modern parents"
     },
     {
-      title: "Premium Lifestyle Brands",
-      subtitle: "Elevating everyday experiences"
+      title: "Learning Through Play",
+      subtitle: "Educational games that develop children's intelligence"
     },
     {
-      title: "Global Brand Excellence",
-      subtitle: "Connecting brands with worldwide markets"
+      title: "Where Every Ride Begins",
+      subtitle: "Quality bicycles for kids and adults"
     },
     {
-      title: "Innovation Meets Tradition",
-      subtitle: "Timeless values, modern solutions"
+      title: "Creative Expression",
+      subtitle: "Art and craft tools that inspire creativity"
     }
   ];
 
