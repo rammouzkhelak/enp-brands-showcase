@@ -78,8 +78,8 @@ const Index: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 justify-items-center">
                 <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-80 animate-fade-in">
                   <img 
-                    src={trueBotanicalsImg} 
-                    alt="True Botanicals"
+                    src="/lovable-uploads/eaf9aca9-67d4-4c0f-8c16-ed24c58ccfef.png" 
+                    alt="Vital Baby"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
@@ -93,8 +93,8 @@ const Index: React.FC = () => {
                 
                 <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-80 animate-fade-in" style={{ animationDelay: '0.1s' }}>
                   <img 
-                    src={instacartImg} 
-                    alt="Instacart"
+                    src="/lovable-uploads/74757dff-8110-475b-a409-4cf70a29a793.png" 
+                    alt="Infantino"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
@@ -111,8 +111,8 @@ const Index: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
                 <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-64 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                   <img 
-                    src={nutrafolImg} 
-                    alt="Nutrafol"
+                    src="/lovable-uploads/48e986d2-7df4-4a57-b8c0-33d9aa7b45ff.png" 
+                    alt="Headu"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
@@ -141,8 +141,8 @@ const Index: React.FC = () => {
                 
                 <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-64 animate-fade-in" style={{ animationDelay: '0.4s' }}>
                   <img 
-                    src={plumImg} 
-                    alt="Plum"
+                    src="/lovable-uploads/b82e1497-44e3-4e4a-98ab-15444ab11ab1.png" 
+                    alt="Multiprint"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
