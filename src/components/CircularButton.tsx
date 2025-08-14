@@ -26,6 +26,11 @@ const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, classNam
 
   return (
     <div className={`relative w-40 h-40 cursor-pointer group ${className}`} onClick={handleClick}>
+      {/* Hover background circle */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-32 h-32 rounded-full bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      </div>
+      
       <div className="absolute inset-0 animate-rotate">
         <svg width="160" height="160" viewBox="0 0 160 160" className="overflow-visible">
           <defs>
@@ -41,11 +46,12 @@ const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, classNam
           </text>
         </svg>
       </div>
-      <div className="absolute inset-0 flex items-center justify-center">
+      
+      <div className="absolute inset-0 flex items-center justify-center z-10">
         {arrowDirection === 'down' ? (
-          <ArrowDown className="w-9 h-9 text-current transition-all duration-300 group-hover:scale-110 group-hover:translate-y-2" />
+          <ArrowDown className="w-9 h-9 text-current group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:translate-y-2" />
         ) : (
-          <ArrowRight className="w-9 h-9 text-current transition-transform group-hover:scale-110" />
+          <ArrowRight className="w-9 h-9 text-current group-hover:text-white transition-all duration-300 group-hover:scale-110" />
         )}
       </div>
     </div>
