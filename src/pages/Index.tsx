@@ -27,7 +27,7 @@ const Index: React.FC = () => {
       <HeroSection />
 
       {/* About Section */}
-      <section id="about-section" className="py-24 bg-white">
+      <section id="about-section" className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl ml-16 animate-fade-in">
             <h2 className="heading-medium text-corporate-dark mb-8">
@@ -48,7 +48,7 @@ const Index: React.FC = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio-section" className="py-24 bg-corporate-light">
+      <section id="portfolio-section" className="py-16 bg-corporate-light">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl ml-16 animate-fade-in">
             <div className="flex items-start justify-between mb-16">
@@ -157,7 +157,7 @@ const Index: React.FC = () => {
       </section>
 
       {/* Contact CTA Section */}
-      <section id="contact-section" className="py-24 bg-white">
+      <section id="contact-section" className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h2 className="heading-medium text-corporate-dark mb-8">
