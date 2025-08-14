@@ -31,12 +31,10 @@ const Index: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl ml-0 md:ml-16 animate-fade-in">
             <h2 className="heading-medium text-corporate-dark mb-4 md:mb-6 text-left">
-              We are the venture and growth capital arm of ENP Brands.
+              Building tomorrow's family brands today.
             </h2>
             <p className="body-large text-corporate-medium mb-6 md:mb-8 max-w-full md:max-w-3xl text-left">
-              We support forward-thinking founders who are crafting brands for the modern consumer. 
-              We offer the global reach of ENP Brands and the agility of a skilled venture capital team. 
-              The best of both worlds.
+              ENP Brands specializes in internationally recognized family and children's products, combining global expertise with regional market intelligence.
             </p>
             <Link to="/about">
               <div className="scale-75 md:scale-100 origin-left">
