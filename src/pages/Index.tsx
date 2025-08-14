@@ -5,6 +5,11 @@ import HamburgerMenu from "../components/HamburgerMenu";
 import CircularButton from "../components/CircularButton";
 import Footer from "../components/Footer";
 import { Mail, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
+import trueBotanicalsImg from "../assets/brands/true-botanicals.jpg";
+import instacartImg from "../assets/brands/instacart.jpg";
+import nutrafolImg from "../assets/brands/nutrafol.jpg";
+import frankBodyImg from "../assets/brands/frank-body.jpg";
+import plumImg from "../assets/brands/plum.jpg";
 
 const Index: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
@@ -65,18 +70,87 @@ const Index: React.FC = () => {
             </div>
             
             {/* Brand Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-              {["Infantino", "Vitalbaby", "Headu", "Huffy", "Multiprint"].map((brand, index) => (
-                <div 
-                  key={brand} 
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <h3 className="text-lg font-semibold text-corporate-dark text-center">
-                    {brand}
-                  </h3>
+            <div className="space-y-8">
+              {/* Top Row - 2 Large Images */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-80 animate-fade-in">
+                  <img 
+                    src={trueBotanicalsImg} 
+                    alt="True Botanicals"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform transition-all duration-300 group-hover:-translate-y-2">
+                    <h3 className="text-2xl font-bold mb-2 transition-all duration-300">True Botanicals</h3>
+                    <p className="text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
+                      Skincare with natural and organic ingredients
+                    </p>
+                  </div>
                 </div>
-              ))}
+                
+                <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-80 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                  <img 
+                    src={instacartImg} 
+                    alt="Instacart"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform transition-all duration-300 group-hover:-translate-y-2">
+                    <h3 className="text-2xl font-bold mb-2 transition-all duration-300">Instacart</h3>
+                    <p className="text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
+                      Groceries delivered in as little as one hour
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Bottom Row - 3 Smaller Images */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-64 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                  <img 
+                    src={nutrafolImg} 
+                    alt="Nutrafol"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform transition-all duration-300 group-hover:-translate-y-2">
+                    <h3 className="text-xl font-bold mb-1 transition-all duration-300">Nutrafol</h3>
+                    <p className="text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
+                      Hair wellness supplements
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-64 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                  <img 
+                    src={frankBodyImg} 
+                    alt="Frank Body"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform transition-all duration-300 group-hover:-translate-y-2">
+                    <h3 className="text-xl font-bold mb-1 transition-all duration-300">Frank Body</h3>
+                    <p className="text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
+                      Australian made coffee scrubs
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-64 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                  <img 
+                    src={plumImg} 
+                    alt="Plum"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform transition-all duration-300 group-hover:-translate-y-2">
+                    <h3 className="text-xl font-bold mb-1 transition-all duration-300">Plum</h3>
+                    <p className="text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
+                      Modern skincare and beauty
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
