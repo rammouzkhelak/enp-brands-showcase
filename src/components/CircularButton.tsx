@@ -36,7 +36,7 @@ const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, classNam
           <defs>
             <path
               id={pathId}
-              d="M 80,80 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"
+              d="M 80,80 m -55,0 a 55,55 0 1,1 110,0 a 55,55 0 1,1 -110,0"
             />
           </defs>
           <text className="text-[9px] font-bold fill-current uppercase tracking-wide" style={{ letterSpacing: '0.12em' }}>
