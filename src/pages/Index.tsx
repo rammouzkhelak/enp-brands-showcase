@@ -9,6 +9,7 @@ import trueBotanicalsImg from "../assets/brands/true-botanicals.jpg";
 import instacartImg from "../assets/brands/instacart.jpg";
 import nutrafolImg from "../assets/brands/nutrafol.jpg";
 import frankBodyImg from "../assets/brands/frank-body.jpg";
+import huffyBikeImg from "../assets/brands/huffy-bike.jpg";
 import plumImg from "../assets/brands/plum.jpg";
 
 const Index: React.FC = () => {
@@ -125,8 +126,8 @@ const Index: React.FC = () => {
                 
                 <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer h-64 animate-fade-in" style={{ animationDelay: '0.3s' }}>
                   <img 
-                    src={frankBodyImg} 
-                    alt="Frank Body"
+                    src="/lovable-uploads/a1ad8be3-8c2a-43b4-9bdd-165e6541e8a4.png" 
+                    alt="Huffy Bicycle"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
