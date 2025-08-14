@@ -62,11 +62,11 @@ const HamburgerMenu: React.FC = () => {
         </Link>
       </div>
 
-      {/* Hamburger Button - Always visible, moves with scroll on all pages */}
+      {/* Hamburger Button - Moves with scroll only on home page */}
       <button
         onClick={toggleMenu}
         className={`fixed right-6 z-50 w-16 h-16 flex flex-col items-center justify-center space-y-1.5 bg-transparent hover:bg-white/10 transition-all duration-300 rounded-lg ${
-          isScrolled ? 'top-6' : 'top-10'
+          location.pathname === '/' && isScrolled ? 'top-6' : 'top-10'
         }`}
         aria-label="Toggle menu"
       >
