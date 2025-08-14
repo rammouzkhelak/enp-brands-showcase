@@ -32,13 +32,13 @@ const About: React.FC = () => {
       <HamburgerMenu />
       
       {/* About Section */}
-      <section className="py-8 bg-background">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-sm uppercase tracking-wider text-corporate-medium mb-6">ABOUT</p>
-          <h1 className="text-4xl md:text-6xl font-bold text-corporate-dark mb-6 max-w-5xl mx-auto leading-tight">
+      <section className="py-6 bg-background">
+        <div className="container mx-auto px-6 text-left md:text-center">
+          <p className="text-sm uppercase tracking-wider text-corporate-medium mb-4">ABOUT</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-corporate-dark mb-4 max-w-5xl md:mx-auto leading-tight">
             Building brands and scaling businesses is in our DNA
           </h1>
-          <p className="text-lg text-corporate-medium max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-corporate-medium max-w-4xl md:mx-auto leading-relaxed">
             We empower a new breed of forward-thinking entrepreneurs with big ideas, to help them build strong 
             brands or technology solutions that stand out and move the world forward. We understand the highly 
             specific needs of a consumer start-up. For over twenty years, we have helped build strong brands and 
@@ -49,24 +49,24 @@ const About: React.FC = () => {
       </section>
 
       {/* First Carousel Section */}
-      <section className="py-16 bg-white overflow-hidden">
+      <section className="py-12 bg-white overflow-hidden">
         <ScrollCarousel 
           images={carouselImages1} 
           direction="right"
-          className="py-8"
+          className="py-6"
         />
       </section>
 
       {/* What We Look For Section */}
-      <section className="py-8 bg-background">
+      <section className="py-6 bg-background">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-corporate-dark mb-6">What we look for</h2>
-          <p className="text-lg text-corporate-medium max-w-4xl mx-auto mb-12 leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold text-corporate-dark mb-4">What we look for</h2>
+          <p className="text-lg text-corporate-medium max-w-4xl mx-auto mb-8 leading-relaxed">
             We are seeking to back the brands of tomorrow and the technologies that enable them to succeed in 
             large markets.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {/* Beauty & Wellness Brands */}
             <div className="bg-white p-8 border-4 border-corporate-dark">
               <h3 className="text-xl font-bold text-corporate-dark mb-4">
@@ -101,19 +101,19 @@ const About: React.FC = () => {
       </section>
 
       {/* Second Carousel Section */}
-      <section className="py-16 bg-white overflow-hidden">
+      <section className="py-12 bg-white overflow-hidden">
         <ScrollCarousel 
           images={carouselImages2} 
           direction="left"
-          className="py-8"
+          className="py-6"
         />
       </section>
 
       {/* What We Offer Section */}
-      <section className="py-8 bg-white">
+      <section className="py-6 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-corporate-dark mb-4">What we offer</h2>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-corporate-dark mb-3">What we offer</h2>
             <p className="text-lg text-corporate-medium max-w-4xl mx-auto leading-relaxed">
               We are value-added partners and can leverage our extensive networks to support our portfolio companies 
               as they grow. We serve as a nexus between our companies and enable our founders to learn from each 
@@ -121,7 +121,7 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Item 1 */}
             <div className="text-center">
               <div className="w-20 h-20 bg-corporate-dark rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
@@ -176,9 +176,9 @@ const About: React.FC = () => {
       </section>
 
       {/* Team and Portfolio Section */}
-      <section className="py-8 bg-background">
+      <section className="py-6 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
             {/* Contact Us Card */}
             <div className="relative bg-white border-4 border-corporate-dark h-64">
               <div className="p-8 h-full flex flex-col">
