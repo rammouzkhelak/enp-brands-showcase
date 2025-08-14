@@ -110,9 +110,7 @@ const About: React.FC = () => {
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-corporate-dark mb-3">What we offer</h2>
             <p className="text-lg text-corporate-medium max-w-4xl mx-auto leading-relaxed">
-              We are value-added partners and can leverage our extensive networks to support our portfolio companies 
-              as they grow. We serve as a nexus between our companies and enable our founders to learn from each 
-              other, partner together and tap into our network of industry experts to accelerate any learning curves.
+              We support our partners with the expertise and resources needed to succeed in the family products market.
             </p>
           </div>
 
@@ -123,7 +121,7 @@ const About: React.FC = () => {
                 1
               </div>
               <h3 className="text-xl font-bold text-corporate-dark mb-4">
-                We understand the highly specific needs of a consumer start-up
+                Strong understanding of family product markets and what customers want
               </h3>
             </div>
 
@@ -133,7 +131,7 @@ const About: React.FC = () => {
                 2
               </div>
               <h3 className="text-xl font-bold text-corporate-dark mb-4">
-                We offer decades of consumer and retail experience
+                Complete brand support and marketing assistance across all channels
               </h3>
             </div>
 
@@ -143,7 +141,7 @@ const About: React.FC = () => {
                 3
               </div>
               <h3 className="text-xl font-bold text-corporate-dark mb-4">
-                We bring unrivalled expertise and networks in the consumer goods industry
+                Experience with international brands and local market needs
               </h3>
             </div>
 
@@ -153,7 +151,7 @@ const About: React.FC = () => {
                 4
               </div>
               <h3 className="text-xl font-bold text-corporate-dark mb-4">
-                We are stage agnostic covering Seed through to Series C/D
+                Full distribution support from import to retail assistance
               </h3>
             </div>
 
@@ -163,7 +161,7 @@ const About: React.FC = () => {
                 5
               </div>
               <h3 className="text-xl font-bold text-corporate-dark mb-4">
-                We offer flexible capital, investing from $500,000 to $15 million
+                Quality control and customer service across all our product lines
               </h3>
             </div>
           </div>
