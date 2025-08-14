@@ -28,7 +28,7 @@ const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, classNam
     <div className={`relative w-40 h-40 cursor-pointer group ${className}`} onClick={handleClick}>
       {/* Hover background circle */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-32 h-32 rounded-full bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="w-32 h-32 rounded-full bg-black scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
       </div>
       
       <div className="absolute inset-0 animate-rotate">
