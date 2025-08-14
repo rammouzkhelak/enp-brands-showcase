@@ -57,7 +57,7 @@ const HamburgerMenu: React.FC = () => {
             setTimeout(() => window.scrollTo(0, 0), 100);
           }}
           className={`text-2xl md:text-3xl font-bold hover:opacity-80 transition-opacity ${
-            location.pathname === '/contact' ? 'text-white' : 'text-black'
+            location.pathname === '/' || location.pathname === '/contact' ? 'text-white' : 'text-black'
           }`}
         >
           ENP Brands
