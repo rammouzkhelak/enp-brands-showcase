@@ -56,17 +56,16 @@ const About: React.FC = () => {
       {/* What We Look For Section */}
       <section className="py-6 bg-background">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-corporate-dark mb-4">What we look for</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-corporate-dark mb-4">What we focus on</h2>
           <p className="text-lg text-corporate-medium max-w-4xl mx-auto mb-8 leading-relaxed">
-            We are seeking to back the brands of tomorrow and the technologies that enable them to succeed in 
-            large markets.
+            We work with family and children's brands that improve development, safety, and everyday life.
           </p>
           
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {/* Beauty & Wellness Brands */}
             <div className="bg-white p-8 border-4 border-corporate-dark">
               <h3 className="text-xl font-bold text-corporate-dark mb-4">
-                Beauty & Wellness Brands
+                Learning & Development Products
               </h3>
               <p className="text-corporate-medium leading-relaxed">
                 Relatable and authentic emerging brands operating across the digital and physical worlds
@@ -76,7 +75,7 @@ const About: React.FC = () => {
             {/* Commerce & Enabling Technologies */}
             <div className="bg-white p-8 border-4 border-corporate-dark">
               <h3 className="text-xl font-bold text-corporate-dark mb-4">
-                Commerce & Enabling Technologies
+                Family Safety & Recreation
               </h3>
               <p className="text-corporate-medium leading-relaxed">
                 Services and technologies that enhance the consumer experience and transform commerce
@@ -86,7 +85,7 @@ const About: React.FC = () => {
             {/* B2B/Enterprise Technologies */}
             <div className="bg-white p-8 border-4 border-corporate-dark">
               <h3 className="text-xl font-bold text-corporate-dark mb-4">
-                B2B/Enterprise Technologies
+                Smart Solutions & Creative Tools
               </h3>
               <p className="text-corporate-medium leading-relaxed">
                 Advanced Enterprise Technologies that allow higher reach, streamline processes or boost efficiencies
