@@ -165,7 +165,7 @@ const Index: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h2 className="heading-medium text-corporate-dark mb-4 md:mb-6">
-              Got tomorrow's big idea?
+              Ready To Partner?
             </h2>
             <p className="body-large text-corporate-medium mb-6 md:mb-8">
               Exploring distribution opportunities, retail partnerships, or strategic collaboration? Let's discuss how we can grow together.
