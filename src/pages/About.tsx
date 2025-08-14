@@ -177,7 +177,7 @@ const About: React.FC = () => {
               <div className="p-8 h-full flex flex-col">
                 <h2 className="text-2xl md:text-3xl font-bold text-corporate-dark mb-4">Contact Us</h2>
                 <p className="text-base text-corporate-medium leading-relaxed flex-1">
-                  Got tomorrow's big idea? We want to hear from you. Let's build something extraordinary together.
+                  Interested in partnering with established family brands? Let's talk about growing your business together.
                 </p>
               </div>
               <div className="absolute -bottom-6 -right-6">
@@ -194,7 +194,7 @@ const About: React.FC = () => {
               <div className="p-8 h-full flex flex-col">
                 <h2 className="text-2xl md:text-3xl font-bold text-corporate-dark mb-4">Our Portfolio</h2>
                 <p className="text-base text-corporate-medium leading-relaxed flex-1">
-                  Discover our brand crafters, change leaders and commerce trail blazers.
+                  See our collection of trusted international brands in family and children's products.
                 </p>
               </div>
               <div className="absolute -bottom-6 -right-6">
