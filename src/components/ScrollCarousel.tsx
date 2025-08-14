@@ -26,14 +26,15 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
   // Calculate transform based on scroll position and direction
   const getTransform = () => {
     const scrollFactor = scrollY * 0.3; // Reduced speed of movement
-    const imageWidth = 384 + 32; // w-96 + space-x-8 = 384px + 32px gap
+    const imageWidth = 448 + 32; // w-112 + space-x-8 = 448px + 32px gap
     const totalWidth = imageWidth * images.length;
     
-    // Use modulo to create seamless loop and ensure images are always visible
+    // Create seamless infinite scroll effect
     const baseTranslateX = direction === 'left' ? -scrollFactor : scrollFactor;
-    const translateX = baseTranslateX % totalWidth;
+    const translateX = ((baseTranslateX % totalWidth) + totalWidth) % totalWidth;
+    const finalTranslateX = direction === 'left' ? -translateX : translateX;
     
-    return `translateX(${translateX}px)`;
+    return `translateX(${finalTranslateX}px)`;
   };
 
   return (
@@ -42,27 +43,15 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
         className="flex space-x-8 transition-transform duration-100 ease-out"
         style={{ transform: getTransform() }}
       >
-        {images.map((image, index) => (
+        {/* Triple the images for seamless infinite scroll */}
+        {[...images, ...images, ...images].map((image, index) => (
           <div 
             key={index}
-            className="flex-shrink-0 w-96 h-80 rounded-lg overflow-hidden shadow-lg"
+            className="flex-shrink-0 w-112 h-96 rounded-lg overflow-hidden shadow-lg"
           >
             <img 
               src={image} 
-              alt={`Brand ${index + 1}`}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ))}
-        {/* Duplicate images for seamless loop */}
-        {images.map((image, index) => (
-          <div 
-            key={`duplicate-${index}`}
-            className="flex-shrink-0 w-96 h-80 rounded-lg overflow-hidden shadow-lg"
-          >
-            <img 
-              src={image} 
-              alt={`Brand duplicate ${index + 1}`}
+              alt={`Brand ${(index % images.length) + 1}`}
               className="w-full h-full object-cover"
             />
           </div>

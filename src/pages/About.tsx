@@ -49,11 +49,11 @@ const About: React.FC = () => {
       </section>
 
       {/* First Carousel Section */}
-      <section className="py-16 bg-white overflow-hidden">
+      <section className="py-24 bg-white overflow-hidden">
         <ScrollCarousel 
           images={carouselImages1} 
           direction="right"
-          className="py-12"
+          className="py-16"
         />
       </section>
 
@@ -101,11 +101,11 @@ const About: React.FC = () => {
       </section>
 
       {/* Second Carousel Section */}
-      <section className="py-16 bg-white overflow-hidden">
+      <section className="py-24 bg-white overflow-hidden">
         <ScrollCarousel 
           images={carouselImages2} 
           direction="left"
-          className="py-12"
+          className="py-16"
         />
       </section>
 
