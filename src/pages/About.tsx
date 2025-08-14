@@ -36,14 +36,10 @@ const About: React.FC = () => {
         <div className="container mx-auto px-6 text-left md:text-center">
           <p className="text-sm uppercase tracking-wider text-corporate-medium mb-4">ABOUT</p>
           <h1 className="text-4xl md:text-6xl font-bold text-corporate-dark mb-4 max-w-5xl md:mx-auto leading-tight">
-            Building brands and scaling businesses is in our DNA
+            Building trusted family brands is what we do
           </h1>
           <p className="text-lg text-corporate-medium max-w-4xl md:mx-auto leading-relaxed">
-            We empower a new breed of forward-thinking entrepreneurs with big ideas, to help them build strong 
-            brands or technology solutions that stand out and move the world forward. We understand the highly 
-            specific needs of a consumer start-up. For over twenty years, we have helped build strong brands and 
-            businesses. We bring unrivalled expertise and leadership in the consumer goods industry, from the 
-            factory to end-user.
+            ENP Brands manages internationally recognized family and children's product brands. We combine global innovation with local market knowledge to deliver quality solutions that families trust and love.
           </p>
         </div>
       </section>
