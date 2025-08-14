@@ -13,8 +13,8 @@ const HeroSection: React.FC = () => {
   
   const heroContent = [
     {
-      title: "Empowering Tomorrow's Brands",
-      subtitle: "Building the future of consumer innovation"
+      title: "Essential Baby Care",
+      subtitle: "Safe, practical products for feeding, hygiene, and everyday baby needs."
     },
     {
       title: "Crafting Childhood Moments",
