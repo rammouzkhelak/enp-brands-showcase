@@ -96,16 +96,15 @@ const Contact: React.FC = () => {
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-12">Find us online</h2>
           
-          {/* Social Media Icons */}
-          <div className="flex justify-center space-x-8">
-            <a href="#" className="w-12 h-12 flex items-center justify-center border border-gray-600 rounded-full hover:bg-white hover:text-black transition-all duration-300">
-              <Instagram className="w-6 h-6" />
-            </a>
-            <a href="#" className="w-12 h-12 flex items-center justify-center border border-gray-600 rounded-full hover:bg-white hover:text-black transition-all duration-300">
-              <Linkedin className="w-6 h-6" />
-            </a>
-            <a href="#" className="w-12 h-12 flex items-center justify-center border border-gray-600 rounded-full hover:bg-white hover:text-black transition-all duration-300">
-              <Twitter className="w-6 h-6" />
+          {/* Website Link */}
+          <div className="flex justify-center">
+            <a 
+              href="https://mibebe.store/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-2xl md:text-3xl font-semibold hover:text-gray-300 transition-colors"
+            >
+              mibebe.store
             </a>
           </div>
         </div>
