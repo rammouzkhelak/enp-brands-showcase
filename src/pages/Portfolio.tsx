@@ -67,7 +67,7 @@ const Portfolio: React.FC = () => {
       <HamburgerMenu />
       
       {/* Brand Navigation Circles */}
-      <section className="py-20 bg-background">
+      <section className="pt-32 pb-20 md:py-20 bg-background">
         <div className="container mx-auto px-6">
           <h2 className="heading-medium text-corporate-dark text-center mb-6">
             Explore Our Brands
@@ -75,7 +75,7 @@ const Portfolio: React.FC = () => {
           <p className="body-large text-corporate-medium text-center mb-12 max-w-3xl mx-auto">
             We work with some of your favorite brands across multiple categories, each bringing innovation and quality to their respective markets.
           </p>
-          <div className="flex justify-center items-center gap-8 flex-wrap">
+          <div className="grid grid-cols-2 gap-6 sm:gap-8 md:flex md:justify-center md:items-center md:flex-wrap max-w-lg mx-auto md:max-w-none">
             {brands.map((brand) => (
               <CircularButton
                 key={brand.id}
