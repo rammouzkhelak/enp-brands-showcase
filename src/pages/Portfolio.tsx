@@ -67,7 +67,7 @@ const Portfolio: React.FC = () => {
       <HamburgerMenu />
       
       {/* Brand Navigation Circles */}
-      <section className="pt-32 pb-20 md:py-20 bg-background">
+      <section className="pt-32 pb-20 md:pt-32 md:pb-20 bg-background">
         <div className="container mx-auto px-6">
           <h2 className="heading-medium text-corporate-dark text-center mb-6">
             Explore Our Brands
