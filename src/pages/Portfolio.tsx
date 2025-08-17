@@ -66,22 +66,15 @@ const Portfolio: React.FC = () => {
     <div className="min-h-screen bg-background">
       <HamburgerMenu />
       
-      {/* Header */}
-      <header className="relative py-20 bg-corporate-light">
-        <div className="container mx-auto px-6">
-          <h1 className="heading-large text-corporate-dark">Our Portfolio</h1>
-          <p className="body-large text-corporate-medium mt-6 max-w-3xl">
-            We work with some of your favorite brands across multiple categories.
-          </p>
-        </div>
-      </header>
-
       {/* Brand Navigation Circles */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <h2 className="heading-medium text-corporate-dark text-center mb-12">
+          <h2 className="heading-medium text-corporate-dark text-center mb-6">
             Explore Our Brands
           </h2>
+          <p className="body-large text-corporate-medium text-center mb-12 max-w-3xl mx-auto">
+            We work with some of your favorite brands across multiple categories, each bringing innovation and quality to their respective markets.
+          </p>
           <div className="flex justify-center items-center gap-8 flex-wrap">
             {brands.map((brand) => (
               <CircularButton
@@ -112,7 +105,7 @@ const Portfolio: React.FC = () => {
                   <img 
                     src={brand.imageUrl} 
                     alt={brand.name}
-                    className="w-12 h-12 object-contain rounded-full"
+                    className="w-16 h-16 object-contain rounded-full"
                   />
                 </div>
                 <p className="body-large text-corporate-medium mb-8 max-w-2xl">
@@ -151,38 +144,6 @@ const Portfolio: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-      
-      {/* Investment Philosophy */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="heading-medium text-corporate-dark mb-8">Investment Philosophy</h2>
-            <p className="body-large text-corporate-medium mb-8">
-              We invest in beauty & wellness brands, commerce and technology that serve the modern consumer.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="text-center">
-                <h3 className="heading-small text-corporate-dark mb-4">Innovation</h3>
-                <p className="body-medium text-corporate-medium">
-                  Backing brands that challenge the status quo and redefine their categories.
-                </p>
-              </div>
-              <div className="text-center">
-                <h3 className="heading-small text-corporate-dark mb-4">Growth</h3>
-                <p className="body-medium text-corporate-medium">
-                  Supporting scalable businesses with strong market potential and clear pathways to expansion.
-                </p>
-              </div>
-              <div className="text-center">
-                <h3 className="heading-small text-corporate-dark mb-4">Impact</h3>
-                <p className="body-medium text-corporate-medium">
-                  Investing in brands that make a positive difference in consumers' lives and communities.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
       
