@@ -42,6 +42,7 @@ const Contact: React.FC = () => {
             <div className="flex-shrink-0">
               <CircularButton 
                 text="OUR LOCATIONS • OUR LOCATIONS • " 
+                arrowDirection="down"
                 onClick={scrollToLocations}
                 className="text-white"
               />

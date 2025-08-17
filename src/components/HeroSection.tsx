@@ -88,6 +88,7 @@ const HeroSection: React.FC = () => {
           <CircularButton
             text="SCROLL DOWN • SCROLL DOWN • SCROLL DOWN • "
             onClick={scrollToNext}
+            arrowDirection="down"
           />
         </div>
       </div>

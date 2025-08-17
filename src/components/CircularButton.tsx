@@ -1,13 +1,15 @@
 import React, { useId } from "react";
+import { ArrowRight, ArrowDown } from "lucide-react";
 
 interface CircularButtonProps {
   text: string;
   onClick?: () => void;
   className?: string;
   imageUrl?: string;
+  arrowDirection?: 'right' | 'down';
 }
 
-const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, className = "", imageUrl }) => {
+const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, className = "", imageUrl, arrowDirection = 'right' }) => {
   const radius = 62;
   const circumference = 2 * Math.PI * radius;
   const pathId = useId();
@@ -55,9 +57,13 @@ const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, classNam
             className="w-20 h-20 object-cover rounded-full transition-all duration-300 group-hover:scale-110"
           />
         ) : (
-          <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center">
-            <span className="text-xs font-bold text-gray-500">{text.charAt(0)}</span>
-          </div>
+          <>
+            {arrowDirection === 'down' ? (
+              <ArrowDown className="w-9 h-9 text-current group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:translate-y-2" />
+            ) : (
+              <ArrowRight className="w-9 h-9 text-current group-hover:text-white transition-all duration-300 group-hover:scale-110" />
+            )}
+          </>
         )}
       </div>
     </div>
