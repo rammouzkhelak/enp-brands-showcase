@@ -1,43 +1,64 @@
 import React, { useEffect } from "react";
 import HamburgerMenu from "../components/HamburgerMenu";
 import Footer from "../components/Footer";
-import { ArrowLeft, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
+import CircularButton from "../components/CircularButton";
+import { ExternalLink } from "lucide-react";
 
 const Portfolio: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const scrollToSection = (brandId: string) => {
+    const element = document.getElementById(brandId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   const brands = [
     {
+      id: "infantino",
       name: "Infantino",
       category: "Baby & Toddler",
-      description: "Innovative baby products designed to grow with your child and support developmental milestones.",
-      focus: "Child Development, Safety, Innovation"
+      description: "Innovative baby products designed to grow with your child and support developmental milestones. From carriers to toys, we create solutions that make parenting easier and more enjoyable.",
+      focus: "Child Development, Safety, Innovation",
+      collections: ["Baby Carriers", "Developmental Toys", "Feeding Accessories", "Bath Time Essentials"]
     },
     {
-      name: "Vitalbaby",
+      id: "vitalbaby",
+      name: "Vitalbaby", 
       category: "Feeding Solutions",
-      description: "Premium feeding solutions and baby care products for health-conscious parents.",
-      focus: "Nutrition, Wellness, Premium Quality"
+      description: "Premium feeding solutions and baby care products for health-conscious parents. Our products combine functionality with safety to support your baby's nutritional journey.",
+      focus: "Nutrition, Wellness, Premium Quality",
+      collections: ["Feeding Bottles", "Sterilizers", "Baby Food Makers", "Travel Essentials"]
     },
     {
+      id: "headu",
       name: "Headu",
       category: "Educational Toys",
-      description: "Educational games and toys that make learning fun and engaging for children.",
-      focus: "Education, Cognitive Development, Play-Based Learning"
+      description: "Educational games and toys that make learning fun and engaging for children. We believe in the power of play-based learning to develop crucial skills.",
+      focus: "Education, Cognitive Development, Play-Based Learning",
+      collections: ["Learning Games", "Puzzle Sets", "Creative Kits", "STEM Toys"]
     },
     {
+      id: "huffy",
       name: "Huffy",
-      category: "Active Lifestyle",
-      description: "Bicycles and outdoor equipment encouraging active lifestyles for all ages.",
-      focus: "Active Living, Outdoor Recreation, Family Fun"
+      category: "Active Lifestyle", 
+      description: "Bicycles and outdoor equipment encouraging active lifestyles for all ages. We're committed to getting families outside and moving together.",
+      focus: "Active Living, Outdoor Recreation, Family Fun",
+      collections: ["Kids Bikes", "Adult Bicycles", "Outdoor Gear", "Accessories"]
     },
     {
+      id: "multiprint",
       name: "Multiprint",
       category: "Creative Play",
-      description: "Creative stamping and craft products that inspire artistic expression in children.",
-      focus: "Creativity, Arts & Crafts, Self-Expression"
+      description: "Creative stamping and craft products that inspire artistic expression in children. We foster creativity through hands-on activities and imaginative play.",
+      focus: "Creativity, Arts & Crafts, Self-Expression",
+      collections: ["Stamp Sets", "Craft Kits", "Art Supplies", "Creative Tools"]
     }
   ];
 
@@ -55,66 +76,114 @@ const Portfolio: React.FC = () => {
         </div>
       </header>
 
-      {/* Portfolio Grid */}
-      <main className="py-20">
+      {/* Brand Navigation Circles */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {brands.map((brand, index) => (
-              <div 
-                key={brand.name} 
-                className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="heading-small text-corporate-dark">{brand.name}</h3>
-                  <ExternalLink className="w-5 h-5 text-corporate-medium hover:text-corporate-dark transition-colors cursor-pointer" />
+          <h2 className="heading-medium text-corporate-dark text-center mb-12">
+            Explore Our Brands
+          </h2>
+          <div className="flex justify-center items-center gap-8 flex-wrap">
+            {brands.map((brand) => (
+              <CircularButton
+                key={brand.id}
+                text={brand.name}
+                onClick={() => scrollToSection(brand.id)}
+                arrowDirection="down"
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Brand Sections */}
+      <section className="py-20 bg-corporate-light">
+        <div className="container mx-auto px-6">
+          {brands.map((brand, index) => (
+            <div
+              key={brand.id}
+              id={brand.id}
+              className={`mb-20 last:mb-0 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex flex-col lg:flex-row items-center gap-12`}
+            >
+              {/* Brand Logo Placeholder */}
+              <div className="flex-shrink-0 w-64 h-64 bg-white rounded-full shadow-lg flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="heading-small text-corporate-dark mb-2">{brand.name}</h3>
+                  <p className="text-sm text-corporate-accent font-medium">{brand.category}</p>
                 </div>
-                
-                <p className="text-sm font-medium text-corporate-accent mb-4">{brand.category}</p>
-                
-                <p className="body-medium text-corporate-medium mb-6">
+              </div>
+
+              {/* Brand Content */}
+              <div className="flex-1 text-center lg:text-left">
+                <h2 className="heading-large text-corporate-dark mb-6">{brand.name}</h2>
+                <p className="body-large text-corporate-medium mb-8 max-w-2xl">
                   {brand.description}
                 </p>
                 
-                <div className="pt-4 border-t border-corporate-light">
-                  <p className="text-sm font-medium text-corporate-dark mb-2">Focus Areas:</p>
-                  <p className="text-sm text-corporate-medium">{brand.focus}</p>
+                <div className="mb-8">
+                  <h4 className="heading-small text-corporate-dark mb-4">Focus Areas</h4>
+                  <p className="body-medium text-corporate-medium">{brand.focus}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-          
-          {/* Investment Philosophy */}
-          <section className="mt-20 py-16 bg-corporate-light rounded-lg">
-            <div className="text-center max-w-4xl mx-auto px-6">
-              <h2 className="heading-medium text-corporate-dark mb-8">Investment Philosophy</h2>
-              <p className="body-large text-corporate-medium mb-8">
-                We invest in beauty & wellness brands, commerce and technology that serve the modern consumer.
-              </p>
-              <div className="grid md:grid-cols-3 gap-8 mt-12">
-                <div className="text-center">
-                  <h3 className="heading-small text-corporate-dark mb-4">Innovation</h3>
-                  <p className="body-medium text-corporate-medium">
-                    Backing brands that challenge the status quo and redefine their categories.
-                  </p>
+
+                <div className="mb-8">
+                  <h4 className="heading-small text-corporate-dark mb-4">Collections</h4>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {brand.collections.map((collection) => (
+                      <div
+                        key={collection}
+                        className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+                      >
+                        <p className="text-sm font-medium text-corporate-dark text-center">
+                          {collection}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="text-center">
-                  <h3 className="heading-small text-corporate-dark mb-4">Growth</h3>
-                  <p className="body-medium text-corporate-medium">
-                    Supporting scalable businesses with strong market potential and clear pathways to expansion.
-                  </p>
-                </div>
-                <div className="text-center">
-                  <h3 className="heading-small text-corporate-dark mb-4">Impact</h3>
-                  <p className="body-medium text-corporate-medium">
-                    Investing in brands that make a positive difference in consumers' lives and communities.
-                  </p>
+
+                <div className="flex justify-center lg:justify-start">
+                  <button className="inline-flex items-center gap-2 text-corporate-accent hover:text-corporate-dark transition-colors duration-300">
+                    <span className="font-medium">Explore Brand</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </button>
                 </div>
               </div>
             </div>
-          </section>
+          ))}
         </div>
-      </main>
+      </section>
+      
+      {/* Investment Philosophy */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-4xl mx-auto">
+            <h2 className="heading-medium text-corporate-dark mb-8">Investment Philosophy</h2>
+            <p className="body-large text-corporate-medium mb-8">
+              We invest in beauty & wellness brands, commerce and technology that serve the modern consumer.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="text-center">
+                <h3 className="heading-small text-corporate-dark mb-4">Innovation</h3>
+                <p className="body-medium text-corporate-medium">
+                  Backing brands that challenge the status quo and redefine their categories.
+                </p>
+              </div>
+              <div className="text-center">
+                <h3 className="heading-small text-corporate-dark mb-4">Growth</h3>
+                <p className="body-medium text-corporate-medium">
+                  Supporting scalable businesses with strong market potential and clear pathways to expansion.
+                </p>
+              </div>
+              <div className="text-center">
+                <h3 className="heading-small text-corporate-dark mb-4">Impact</h3>
+                <p className="body-medium text-corporate-medium">
+                  Investing in brands that make a positive difference in consumers' lives and communities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <Footer />
     </div>
