@@ -52,10 +52,10 @@ const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, classNam
           <img 
             src={imageUrl} 
             alt={text}
-            className="w-16 h-16 object-cover rounded-full transition-all duration-300 group-hover:scale-110"
+            className="w-20 h-20 object-cover rounded-full transition-all duration-300 group-hover:scale-110"
           />
         ) : (
-          <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+          <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center">
             <span className="text-xs font-bold text-gray-500">{text.charAt(0)}</span>
           </div>
         )}

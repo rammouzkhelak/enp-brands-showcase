@@ -103,20 +103,18 @@ const Portfolio: React.FC = () => {
             <div
               key={brand.id}
               id={brand.id}
-              className="mb-20 last:mb-0 flex flex-col lg:flex-row items-start gap-12"
+              className="mb-20 last:mb-0"
             >
-              {/* Brand Logo */}
-              <div className="flex-shrink-0 w-64 h-64 bg-white rounded-full shadow-lg flex items-center justify-center">
-                <img 
-                  src={brand.imageUrl} 
-                  alt={brand.name}
-                  className="w-48 h-48 object-contain rounded-full"
-                />
-              </div>
-
               {/* Brand Content */}
               <div className="flex-1">
-                <h2 className="heading-large text-corporate-dark mb-6">{brand.name}</h2>
+                <div className="flex items-center gap-4 mb-6">
+                  <h2 className="heading-large text-corporate-dark">{brand.name}</h2>
+                  <img 
+                    src={brand.imageUrl} 
+                    alt={brand.name}
+                    className="w-12 h-12 object-contain rounded-full"
+                  />
+                </div>
                 <p className="body-large text-corporate-medium mb-8 max-w-2xl">
                   {brand.description}
                 </p>
