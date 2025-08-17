@@ -1,22 +1,22 @@
 import React, { useId } from "react";
-import { ArrowRight, ArrowDown } from "lucide-react";
 
 interface CircularButtonProps {
   text: string;
   onClick?: () => void;
   className?: string;
-  arrowDirection?: 'right' | 'down';
+  imageUrl?: string;
 }
 
-const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, className = "", arrowDirection = 'right' }) => {
+const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, className = "", imageUrl }) => {
   const radius = 62;
   const circumference = 2 * Math.PI * radius;
   const pathId = useId();
   
-  // Calculate how many times to repeat the text to fill the circle
-  const estimatedTextLength = text.length * 6; // Approximate character width
-  const repetitions = Math.ceil(circumference / estimatedTextLength) + 1; // Add one extra for seamless loop
-  const repeatedText = text.repeat(repetitions);
+  // Create properly spaced text with dots
+  const spacedText = ` ${text} • `;
+  const estimatedTextLength = spacedText.length * 6;
+  const repetitions = Math.ceil(circumference / estimatedTextLength) + 1;
+  const repeatedText = spacedText.repeat(repetitions);
   
   const handleClick = () => {
     if (onClick) {
@@ -28,7 +28,7 @@ const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, classNam
     <div className={`relative w-40 h-40 cursor-pointer group ${className}`} onClick={handleClick}>
       {/* Hover background circle */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-28 h-28 rounded-full bg-black scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
+        <div className="w-24 h-24 rounded-full bg-black scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
       </div>
       
       <div className="absolute inset-0 animate-rotate">
@@ -48,10 +48,16 @@ const CircularButton: React.FC<CircularButtonProps> = ({ text, onClick, classNam
       </div>
       
       <div className="absolute inset-0 flex items-center justify-center z-10">
-        {arrowDirection === 'down' ? (
-          <ArrowDown className="w-9 h-9 text-current group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:translate-y-2" />
+        {imageUrl ? (
+          <img 
+            src={imageUrl} 
+            alt={text}
+            className="w-16 h-16 object-cover rounded-full transition-all duration-300 group-hover:scale-110"
+          />
         ) : (
-          <ArrowRight className="w-9 h-9 text-current group-hover:text-white transition-all duration-300 group-hover:scale-110" />
+          <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+            <span className="text-xs font-bold text-gray-500">{text.charAt(0)}</span>
+          </div>
         )}
       </div>
     </div>

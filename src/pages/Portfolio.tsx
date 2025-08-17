@@ -23,42 +23,42 @@ const Portfolio: React.FC = () => {
     {
       id: "infantino",
       name: "Infantino",
-      category: "Baby & Toddler",
       description: "Innovative baby products designed to grow with your child and support developmental milestones. From carriers to toys, we create solutions that make parenting easier and more enjoyable.",
       focus: "Child Development, Safety, Innovation",
-      collections: ["Baby Carriers", "Developmental Toys", "Feeding Accessories", "Bath Time Essentials"]
+      collections: ["Carrier", "Gear", "Bath", "Teether", "Toys"],
+      imageUrl: "/lovable-uploads/1d85af8f-4c2f-4226-8cdf-a0f2154e2174.png"
     },
     {
       id: "vitalbaby",
       name: "Vitalbaby", 
-      category: "Feeding Solutions",
       description: "Premium feeding solutions and baby care products for health-conscious parents. Our products combine functionality with safety to support your baby's nutritional journey.",
       focus: "Nutrition, Wellness, Premium Quality",
-      collections: ["Feeding Bottles", "Sterilizers", "Baby Food Makers", "Travel Essentials"]
+      collections: ["Nurture", "Protect", "Nourish", "Hydrate"],
+      imageUrl: "/lovable-uploads/298b60f0-ce09-4bd0-9014-48cc5ce67550.png"
     },
     {
       id: "headu",
       name: "Headu",
-      category: "Educational Toys",
       description: "Educational games and toys that make learning fun and engaging for children. We believe in the power of play-based learning to develop crucial skills.",
       focus: "Education, Cognitive Development, Play-Based Learning",
-      collections: ["Learning Games", "Puzzle Sets", "Creative Kits", "STEM Toys"]
+      collections: [],
+      imageUrl: "/lovable-uploads/48e986d2-7df4-4a57-b8c0-33d9aa7b45ff.png"
     },
     {
       id: "huffy",
       name: "Huffy",
-      category: "Active Lifestyle", 
       description: "Bicycles and outdoor equipment encouraging active lifestyles for all ages. We're committed to getting families outside and moving together.",
       focus: "Active Living, Outdoor Recreation, Family Fun",
-      collections: ["Kids Bikes", "Adult Bicycles", "Outdoor Gear", "Accessories"]
+      collections: [],
+      imageUrl: "/lovable-uploads/49710c6d-d9d0-4a23-9469-98562b904904.png"
     },
     {
       id: "multiprint",
       name: "Multiprint",
-      category: "Creative Play",
       description: "Creative stamping and craft products that inspire artistic expression in children. We foster creativity through hands-on activities and imaginative play.",
       focus: "Creativity, Arts & Crafts, Self-Expression",
-      collections: ["Stamp Sets", "Craft Kits", "Art Supplies", "Creative Tools"]
+      collections: [],
+      imageUrl: "/lovable-uploads/6cd66727-48bb-40cf-a586-82b68fa5d1fe.png"
     }
   ];
 
@@ -88,7 +88,7 @@ const Portfolio: React.FC = () => {
                 key={brand.id}
                 text={brand.name}
                 onClick={() => scrollToSection(brand.id)}
-                arrowDirection="down"
+                imageUrl={brand.imageUrl}
                 className="hover:scale-110 transition-transform duration-300"
               />
             ))}
@@ -103,18 +103,19 @@ const Portfolio: React.FC = () => {
             <div
               key={brand.id}
               id={brand.id}
-              className={`mb-20 last:mb-0 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex flex-col lg:flex-row items-center gap-12`}
+              className="mb-20 last:mb-0 flex flex-col lg:flex-row items-start gap-12"
             >
-              {/* Brand Logo Placeholder */}
+              {/* Brand Logo */}
               <div className="flex-shrink-0 w-64 h-64 bg-white rounded-full shadow-lg flex items-center justify-center">
-                <div className="text-center">
-                  <h3 className="heading-small text-corporate-dark mb-2">{brand.name}</h3>
-                  <p className="text-sm text-corporate-accent font-medium">{brand.category}</p>
-                </div>
+                <img 
+                  src={brand.imageUrl} 
+                  alt={brand.name}
+                  className="w-48 h-48 object-contain rounded-full"
+                />
               </div>
 
               {/* Brand Content */}
-              <div className="flex-1 text-center lg:text-left">
+              <div className="flex-1">
                 <h2 className="heading-large text-corporate-dark mb-6">{brand.name}</h2>
                 <p className="body-large text-corporate-medium mb-8 max-w-2xl">
                   {brand.description}
@@ -125,23 +126,25 @@ const Portfolio: React.FC = () => {
                   <p className="body-medium text-corporate-medium">{brand.focus}</p>
                 </div>
 
-                <div className="mb-8">
-                  <h4 className="heading-small text-corporate-dark mb-4">Collections</h4>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {brand.collections.map((collection) => (
-                      <div
-                        key={collection}
-                        className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
-                      >
-                        <p className="text-sm font-medium text-corporate-dark text-center">
-                          {collection}
-                        </p>
-                      </div>
-                    ))}
+                {brand.collections.length > 0 && (
+                  <div className="mb-8">
+                    <h4 className="heading-small text-corporate-dark mb-4">Collections</h4>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {brand.collections.map((collection) => (
+                        <div
+                          key={collection}
+                          className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+                        >
+                          <p className="text-sm font-medium text-corporate-dark text-center">
+                            {collection}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
-                <div className="flex justify-center lg:justify-start">
+                <div className="flex justify-start">
                   <button className="inline-flex items-center gap-2 text-corporate-accent hover:text-corporate-dark transition-colors duration-300">
                     <span className="font-medium">Explore Brand</span>
                     <ExternalLink className="w-4 h-4" />
