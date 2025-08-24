@@ -61,7 +61,7 @@ const HamburgerMenu: React.FC = () => {
           <img 
             src="/lovable-uploads/e65fdc14-f04a-4fdf-9b0b-d547c6a79afb.png" 
             alt="ENP Brands" 
-            className="h-10 md:h-12 w-auto"
+            className="h-12 md:h-16 w-auto"
           />
         </Link>
       </div>
