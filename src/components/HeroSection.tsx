@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CircularButton from "./CircularButton";
 import hero2 from "../assets/hero-2.jpg";
-import hero4 from "../assets/hero-4.jpg";
 import hero5 from "../assets/hero-5.jpg";
 
 const HeroSection: React.FC = () => {
@@ -11,7 +10,7 @@ const HeroSection: React.FC = () => {
     "/lovable-uploads/c6ee9e99-b8e3-4e3d-8036-453f2ebe9c93.png",
     hero2,
     "/lovable-uploads/b0ca1f16-d8fd-4d72-a5ba-b87011e6fd24.png",
-    hero4,
+    "/lovable-uploads/a08fa6ad-1a86-41d0-a7a6-2e863cd3717a.png",
     hero5
   ];
   
