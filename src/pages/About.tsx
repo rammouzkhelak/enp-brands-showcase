@@ -32,7 +32,7 @@ const About: React.FC = () => {
       <HamburgerMenu />
       
       {/* About Section */}
-      <section className="pt-20 pb-6 bg-background">
+      <section className="pt-20 pb-4 bg-background">
         <div className="container mx-auto px-6 text-left md:text-center">
           <p className="text-sm uppercase tracking-wider text-corporate-medium mb-4">ABOUT</p>
           <h1 className="text-4xl md:text-6xl font-bold text-corporate-dark mb-4 max-w-5xl md:mx-auto leading-tight">
@@ -45,7 +45,7 @@ const About: React.FC = () => {
       </section>
 
       {/* First Carousel Section */}
-      <section className="py-12 bg-white overflow-hidden">
+      <section className="py-6 bg-white overflow-hidden">
         <ScrollCarousel 
           images={carouselImages1} 
           direction="right"
@@ -54,7 +54,7 @@ const About: React.FC = () => {
       </section>
 
       {/* What We Look For Section */}
-      <section className="py-6 bg-background">
+      <section className="py-4 bg-background">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-corporate-dark mb-4">What we focus on</h2>
           <p className="text-lg text-corporate-medium max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -96,7 +96,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Second Carousel Section */}
-      <section className="py-12 bg-white overflow-hidden">
+      <section className="py-6 bg-white overflow-hidden">
         <ScrollCarousel 
           images={carouselImages2} 
           direction="left"

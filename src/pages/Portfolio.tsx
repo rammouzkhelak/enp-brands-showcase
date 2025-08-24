@@ -72,7 +72,7 @@ const Portfolio: React.FC = () => {
       <HamburgerMenu />
       
       {/* Brand Navigation Circles */}
-      <section className="pt-32 pb-20 md:pt-32 md:pb-20 bg-background">
+      <section className="pt-24 pb-8 md:pt-28 md:pb-10 bg-background">
         <div className="container mx-auto px-6">
           <h2 className="heading-medium text-corporate-dark text-center mb-6">
             Explore Our Brands
@@ -95,13 +95,13 @@ const Portfolio: React.FC = () => {
       </section>
 
       {/* Brand Sections */}
-      <section className="py-20 bg-corporate-light">
+      <section className="py-8 md:py-10 bg-corporate-light">
         <div className="container mx-auto px-6">
           {brands.map((brand, index) => (
             <div
               key={brand.id}
               id={brand.id}
-              className="mb-20 last:mb-0"
+              className="mb-12 last:mb-0"
             >
               {/* Brand Content */}
               <div className="flex-1">
