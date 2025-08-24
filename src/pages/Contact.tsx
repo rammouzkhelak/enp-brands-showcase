@@ -32,8 +32,8 @@ const Contact: React.FC = () => {
               </h1>
               <div className="mt-8">
                 <p className="text-lg md:text-xl text-gray-300 mb-2">Email us at</p>
-                <a href="mailto:hello@enpbrands.com" className="text-2xl md:text-3xl font-semibold hover:text-gray-300 transition-colors">
-                  hello@enpbrands.com
+                <a href="mailto:info@enp-brands.com" className="text-2xl md:text-3xl font-semibold hover:text-gray-300 transition-colors">
+                  info@enp-brands.com
                 </a>
               </div>
             </div>
@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
             {/* Right side: Circular Button */}
             <div className="flex-shrink-0">
               <CircularButton 
-                text="OUR LOCATIONS • OUR LOCATIONS • " 
+                text="OUR LOCATION • OUR LOCATION • " 
                 arrowDirection="down"
                 onClick={scrollToLocations}
                 className="text-white"
@@ -51,37 +51,17 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
-      {/* Second Section: Our Locations */}
+      {/* Second Section: Our Location */}
       <section id="locations-section" className="pt-0 pb-20 px-6">
         <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Our locations</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* London */}
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Our location</h2>
+          <div className="max-w-md mx-auto">
+            {/* Lebanon */}
             <div className="bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">London</h3>
+              <h3 className="text-2xl font-bold mb-4">Lebanon</h3>
               <div className="space-y-1 text-gray-300 text-sm">
                 <p className="font-semibold text-white">ENP Brands</p>
-                <p>52 Conduit Street</p>
-                <p>London</p>
-                <p>W1S 2YX</p>
-                <p>UK</p>
-              </div>
-              <button className="mt-4 text-xs font-semibold text-white border-b border-white/30 hover:border-white transition-colors">
-                GOOGLE MAPS
-              </button>
-            </div>
-            
-            {/* New York */}
-            <div className="bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">New York</h3>
-              <div className="space-y-1 text-gray-300 text-sm">
-                <p className="font-semibold text-white">ENP Brands America</p>
-                <p>Private Ltd</p>
-                <p>ENP House</p>
-                <p>BD Sawant Marg</p>
-                <p>Chakala, Andheri East</p>
-                <p>New York 10001</p>
-                <p>USA</p>
+                <p>Beirut</p>
               </div>
               <button className="mt-4 text-xs font-semibold text-white border-b border-white/30 hover:border-white transition-colors">
                 GOOGLE MAPS

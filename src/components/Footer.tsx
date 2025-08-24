@@ -1,5 +1,5 @@
 import React from "react";
-import { Linkedin, Twitter, Instagram } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
                 Email
               </h3>
               <p className="text-xl font-semibold text-white">
-                hello@enpbrands.com
+                info@enp-brands.com
               </p>
             </div>
             
@@ -38,14 +38,13 @@ const Footer: React.FC = () => {
               <h3 className="text-sm font-semibold text-white/70 uppercase tracking-wider mb-4">
                 Social
               </h3>
-              <div className="flex justify-center space-x-4">
-                <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors duration-300">
-                  <Linkedin className="w-5 h-5 text-white" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors duration-300">
-                  <Twitter className="w-5 h-5 text-white" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors duration-300">
+              <div className="flex justify-center">
+                <a 
+                  href="https://www.instagram.com/mibebe.lb/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                >
                   <Instagram className="w-5 h-5 text-white" />
                 </a>
               </div>
