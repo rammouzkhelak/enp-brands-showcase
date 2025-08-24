@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CircularButton from "./CircularButton";
 import hero2 from "../assets/hero-2.jpg";
-import hero5 from "../assets/hero-5.jpg";
 
 const HeroSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -11,7 +10,7 @@ const HeroSection: React.FC = () => {
     hero2,
     "/lovable-uploads/b0ca1f16-d8fd-4d72-a5ba-b87011e6fd24.png",
     "/lovable-uploads/a08fa6ad-1a86-41d0-a7a6-2e863cd3717a.png",
-    hero5
+    "/lovable-uploads/cb222603-7002-47f1-a3a0-7b834e8c5637.png"
   ];
   
   const heroContent = [
