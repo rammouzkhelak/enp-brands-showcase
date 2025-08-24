@@ -3,6 +3,11 @@ import HamburgerMenu from "../components/HamburgerMenu";
 import Footer from "../components/Footer";
 import CircularButton from "../components/CircularButton";
 import { ExternalLink } from "lucide-react";
+import infantinoImg from "@/assets/brands/infantino.jpg";
+import vitalBabyImg from "@/assets/brands/vital-baby.jpg";
+import headuImg from "@/assets/brands/headu.jpg";
+import huffyImg from "@/assets/brands/huffy.jpg";
+import multiprintImg from "@/assets/brands/multiprint.jpg";
 
 const Portfolio: React.FC = () => {
   useEffect(() => {
@@ -26,7 +31,7 @@ const Portfolio: React.FC = () => {
       description: "Innovative baby products designed to grow with your child and support developmental milestones. From carriers to toys, we create solutions that make parenting easier and more enjoyable.",
       focus: "Child Development, Safety, Innovation",
       collections: ["Carrier", "Gear", "Bath", "Teether", "Toys"],
-      imageUrl: "/lovable-uploads/1d85af8f-4c2f-4226-8cdf-a0f2154e2174.png"
+      imageUrl: infantinoImg
     },
     {
       id: "vitalbaby",
@@ -34,7 +39,7 @@ const Portfolio: React.FC = () => {
       description: "Premium feeding solutions and baby care products for health-conscious parents. Our products combine functionality with safety to support your baby's nutritional journey.",
       focus: "Nutrition, Wellness, Premium Quality",
       collections: ["Nurture", "Protect", "Nourish", "Hydrate"],
-      imageUrl: "/lovable-uploads/298b60f0-ce09-4bd0-9014-48cc5ce67550.png"
+      imageUrl: vitalBabyImg
     },
     {
       id: "headu",
@@ -42,7 +47,7 @@ const Portfolio: React.FC = () => {
       description: "Educational games and toys that make learning fun and engaging for children. We believe in the power of play-based learning to develop crucial skills.",
       focus: "Education, Cognitive Development, Play-Based Learning",
       collections: [],
-      imageUrl: "/lovable-uploads/48e986d2-7df4-4a57-b8c0-33d9aa7b45ff.png"
+      imageUrl: headuImg
     },
     {
       id: "huffy",
@@ -50,7 +55,7 @@ const Portfolio: React.FC = () => {
       description: "Bicycles and outdoor equipment encouraging active lifestyles for all ages. We're committed to getting families outside and moving together.",
       focus: "Active Living, Outdoor Recreation, Family Fun",
       collections: [],
-      imageUrl: "/lovable-uploads/49710c6d-d9d0-4a23-9469-98562b904904.png"
+      imageUrl: huffyImg
     },
     {
       id: "multiprint",
@@ -58,7 +63,7 @@ const Portfolio: React.FC = () => {
       description: "Creative stamping and craft products that inspire artistic expression in children. We foster creativity through hands-on activities and imaginative play.",
       focus: "Creativity, Arts & Crafts, Self-Expression",
       collections: [],
-      imageUrl: "/lovable-uploads/6cd66727-48bb-40cf-a586-82b68fa5d1fe.png"
+      imageUrl: multiprintImg
     }
   ];
 
