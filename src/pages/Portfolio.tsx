@@ -26,7 +26,8 @@ const Portfolio: React.FC = () => {
       description: "Innovative baby products designed to grow with your child and support developmental milestones. From carriers to toys, we create solutions that make parenting easier and more enjoyable.",
       focus: "Child Development, Safety, Innovation",
       collections: ["Carrier", "Gear", "Bath", "Teether", "Toys"],
-      imageUrl: "/lovable-uploads/b4f9da2a-2872-474e-9f22-0f7ea540e892.png"
+      imageUrl: "/lovable-uploads/b4f9da2a-2872-474e-9f22-0f7ea540e892.png",
+      url: "https://mibebe.store/pages/infantino"
     },
     {
       id: "vitalbaby",
@@ -34,7 +35,8 @@ const Portfolio: React.FC = () => {
       description: "Premium feeding solutions and baby care products for health-conscious parents. Our products combine functionality with safety to support your baby's nutritional journey.",
       focus: "Nutrition, Wellness, Premium Quality",
       collections: ["Nurture", "Protect", "Nourish", "Hydrate"],
-      imageUrl: "/lovable-uploads/f8b16008-fcd4-42c5-a7b8-13cf2338ad40.png"
+      imageUrl: "/lovable-uploads/f8b16008-fcd4-42c5-a7b8-13cf2338ad40.png",
+      url: "https://mibebe.store/pages/vitalbaby"
     },
     {
       id: "headu",
@@ -42,7 +44,8 @@ const Portfolio: React.FC = () => {
       description: "Educational games and toys that make learning fun and engaging for children. We believe in the power of play-based learning to develop crucial skills.",
       focus: "Education, Cognitive Development, Play-Based Learning",
       collections: [],
-      imageUrl: "/lovable-uploads/d88170b8-87bd-4c39-bd45-78f3ace9680f.png"
+      imageUrl: "/lovable-uploads/d88170b8-87bd-4c39-bd45-78f3ace9680f.png",
+      url: "https://mibebe.store/pages/headu"
     },
     {
       id: "huffy",
@@ -50,7 +53,8 @@ const Portfolio: React.FC = () => {
       description: "Bicycles and outdoor equipment encouraging active lifestyles for all ages. We're committed to getting families outside and moving together.",
       focus: "Active Living, Outdoor Recreation, Family Fun",
       collections: [],
-      imageUrl: "/lovable-uploads/55ca8a76-1213-4ee1-ab1f-07379a94c94b.png"
+      imageUrl: "/lovable-uploads/55ca8a76-1213-4ee1-ab1f-07379a94c94b.png",
+      url: "https://mibebe.store/pages/huffy"
     },
     {
       id: "multiprint",
@@ -58,7 +62,8 @@ const Portfolio: React.FC = () => {
       description: "Creative stamping and craft products that inspire artistic expression in children. We foster creativity through hands-on activities and imaginative play.",
       focus: "Creativity, Arts & Crafts, Self-Expression",
       collections: [],
-      imageUrl: "/lovable-uploads/b0f33c59-1b51-4c4b-8869-5632bc527d8c.png"
+      imageUrl: "/lovable-uploads/b0f33c59-1b51-4c4b-8869-5632bc527d8c.png",
+      url: "https://mibebe.store/pages/multiprint"
     }
   ];
 
@@ -136,10 +141,15 @@ const Portfolio: React.FC = () => {
                 )}
 
                 <div className="flex justify-start">
-                  <button className="inline-flex items-center gap-2 text-corporate-accent hover:text-corporate-dark transition-colors duration-300">
+                  <a 
+                    href={brand.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-corporate-accent hover:text-corporate-dark transition-colors duration-300"
+                  >
                     <span className="font-medium">Explore Brand</span>
                     <ExternalLink className="w-4 h-4" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

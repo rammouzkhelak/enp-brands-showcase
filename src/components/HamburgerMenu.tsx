@@ -56,11 +56,13 @@ const HamburgerMenu: React.FC = () => {
           onClick={() => {
             setTimeout(() => window.scrollTo(0, 0), 100);
           }}
-          className={`text-2xl md:text-3xl font-bold hover:opacity-80 transition-opacity ${
-            location.pathname === '/' || location.pathname === '/contact' ? 'text-white' : 'text-black'
-          }`}
+          className="hover:opacity-80 transition-opacity"
         >
-          ENP Brands
+          <img 
+            src="/lovable-uploads/e65fdc14-f04a-4fdf-9b0b-d547c6a79afb.png" 
+            alt="ENP Brands" 
+            className="h-10 md:h-12 w-auto"
+          />
         </Link>
       </div>
 
