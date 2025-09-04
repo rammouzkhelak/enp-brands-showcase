@@ -58,11 +58,11 @@ const HamburgerMenu: React.FC = () => {
           }}
           className="hover:opacity-80 transition-opacity"
         >
-          <img 
-            src="/lovable-uploads/e65fdc14-f04a-4fdf-9b0b-d547c6a79afb.png" 
-            alt="ENP Brands" 
-            className="h-12 md:h-16 w-auto"
-          />
+          <span className={`text-2xl md:text-3xl font-bold tracking-wider ${
+            location.pathname === '/contact' ? 'text-white' : 'text-black'
+          }`}>
+            ENP BRANDS
+          </span>
         </Link>
       </div>
 

@@ -32,7 +32,7 @@ const About: React.FC = () => {
       <HamburgerMenu />
       
       {/* About Section */}
-      <section className="pt-20 pb-4 bg-background">
+      <section className="pt-32 pb-4 bg-background">
         <div className="container mx-auto px-6 text-left md:text-center">
           <p className="text-sm uppercase tracking-wider text-corporate-medium mb-4">ABOUT</p>
           <h1 className="text-4xl md:text-6xl font-bold text-corporate-dark mb-4 max-w-5xl md:mx-auto leading-tight">
