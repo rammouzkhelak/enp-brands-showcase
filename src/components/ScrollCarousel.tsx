@@ -49,17 +49,31 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
   // Mobile: Show swipeable carousel with touch gestures
   if (isMobile) {
     return (
-      <div className={`overflow-x-auto scrollbar-hide ${className}`}>
-        <div className="flex space-x-4 px-6 py-4">
+      <div 
+        className={`overflow-x-scroll scrollbar-hide ${className}`}
+        style={{
+          WebkitOverflowScrolling: 'touch',
+          overflowY: 'hidden'
+        }}
+      >
+        <div 
+          className="flex space-x-4 px-6 py-4"
+          style={{
+            scrollSnapType: 'x mandatory'
+          }}
+        >
           {images.map((image, index) => (
             <div 
               key={index}
               className="flex-shrink-0 w-72 h-64 rounded-lg overflow-hidden shadow-lg"
+              style={{
+                scrollSnapAlign: 'start'
+              }}
             >
               <img 
                 src={image} 
                 alt={`Brand ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover pointer-events-none select-none"
                 draggable={false}
               />
             </div>
