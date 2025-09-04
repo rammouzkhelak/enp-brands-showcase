@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface ScrollCarouselProps {
   images: string[];
@@ -13,18 +14,25 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
 }) => {
   const [scrollY, setScrollY] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
+    // Only apply scroll-based animation on desktop
+    if (isMobile) return;
+    
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMobile]);
 
-  // Calculate transform based on scroll position and direction
+  // Calculate transform based on scroll position and direction (desktop only)
   const getTransform = () => {
+    // On mobile, don't apply any transform - let user scroll freely
+    if (isMobile) return 'translateX(0)';
+    
     const scrollFactor = scrollY * 0.3; // Reduced speed of movement
     const imageWidth = 448 + 32; // w-112 + space-x-8 = 448px + 32px gap
     const totalWidth = imageWidth * images.length;
@@ -38,6 +46,29 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
     return `translateX(${translateX}px)`;
   };
 
+  // Mobile: Show scrollable carousel
+  if (isMobile) {
+    return (
+      <div className={`overflow-x-auto ${className}`}>
+        <div className="flex space-x-4 px-6 py-4">
+          {images.map((image, index) => (
+            <div 
+              key={index}
+              className="flex-shrink-0 w-72 h-64 rounded-lg overflow-hidden shadow-lg"
+            >
+              <img 
+                src={image} 
+                alt={`Brand ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // Desktop: Keep existing scroll-based animation
   return (
     <div ref={containerRef} className={`overflow-hidden ${className}`}>
       <div 
