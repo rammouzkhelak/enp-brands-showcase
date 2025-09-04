@@ -14,6 +14,8 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
 }) => {
   const [scrollY, setScrollY] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const mobileScrollRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -27,6 +29,33 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isMobile]);
+
+  // Auto-rotation for mobile carousel
+  useEffect(() => {
+    if (!isMobile || !mobileScrollRef.current || isPaused) return;
+
+    const scrollContainer = mobileScrollRef.current;
+    const scrollStep = 2; // Pixels to scroll per frame
+    let animationFrameId: number;
+
+    const autoScroll = () => {
+      // Check if we've reached the end, reset to beginning
+      if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+        scrollContainer.scrollLeft = 0;
+      } else {
+        scrollContainer.scrollLeft += scrollStep;
+      }
+      animationFrameId = requestAnimationFrame(autoScroll);
+    };
+
+    animationFrameId = requestAnimationFrame(autoScroll);
+
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
+  }, [isMobile, isPaused]);
 
   // Calculate transform based on scroll position and direction (desktop only)
   const getTransform = () => {
@@ -46,15 +75,23 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
     return `translateX(${translateX}px)`;
   };
 
-  // Mobile: Show swipeable carousel with touch gestures
+  // Mobile: Show swipeable carousel with auto-rotation
   if (isMobile) {
     return (
       <div 
+        ref={mobileScrollRef}
         className={`overflow-x-scroll scrollbar-hide ${className}`}
         style={{
           WebkitOverflowScrolling: 'touch',
           overflowY: 'hidden'
         }}
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => {
+          // Resume auto-rotation after 3 seconds of no interaction
+          setTimeout(() => setIsPaused(false), 3000);
+        }}
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
       >
         <div 
           className="flex space-x-4 px-6 py-4"
@@ -62,7 +99,8 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
             scrollSnapType: 'x mandatory'
           }}
         >
-          {images.map((image, index) => (
+          {/* Duplicate images for infinite scroll effect */}
+          {[...images, ...images].map((image, index) => (
             <div 
               key={index}
               className="flex-shrink-0 w-72 h-64 rounded-lg overflow-hidden shadow-lg"
@@ -72,7 +110,7 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
             >
               <img 
                 src={image} 
-                alt={`Brand ${index + 1}`}
+                alt={`Brand ${(index % images.length) + 1}`}
                 className="w-full h-full object-cover pointer-events-none select-none"
                 draggable={false}
               />
